@@ -21,56 +21,56 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-// --------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------
 //        |  TAB  |  Q  |  W  |  E   |  R  |  T  | <=> |  Y    |  U    |  I  |  O  |  P  |  BSPC   |
 // |  ESC | CAPS  |  A  |  S  |  D   |  F  |  G  | <=> |  H    |  J    |  K  |  L  |  ;  |  /'     | ENTER |
 //        | SHIFT |  Z  |  X  |  C   |  V  |  B  | <=> |  N    |  M    |  ,  |  .  |  /  |  SHIFT  |
 //                            | CTRL | ALT | CMD | <=> | LWR   | SPACE | RSE |
                         bindings = <
-   &kp ESC &kp TAB &kp Q &kp W &kp E &kp R &kp T &kp Y         &kp U  &kp I     &kp O   &kp P    &kp BSPC &kp ENTER
-            &kp CAPS &kp A &kp S &kp D &kp F &kp G &kp H         &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-            &kp LSHFT  &kp Z &kp X &kp C &kp V &kp B &kp N         &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                         &kp LCTRL &kp LALT &kp LWIN &mo LWR &kp SPACE &mo RSE
+   &kp ESC  &kp TAB    &kp Q  &kp W   &kp E   &kp R      &kp T     &kp Y         &kp U    &kp I      &kp O    &kp P     &kp BSPC  &kp ENTER
+            &kp CAPS   &kp A  &kp S   &kp D   &kp F      &kp G     &kp H         &kp J    &kp K      &kp L    &kp SEMI  &kp SQT
+            &kp LSHFT  &kp Z  &kp X   &kp C   &kp V      &kp B     &kp N         &kp M    &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                                              &kp LCTRL  &kp LALT  &kp LWIN      &mo LWR  &kp SPACE  &mo RSE
                         >;
                 };
                 lower_layer {
-// -----------------------------------------------------------------------------------------
-//       |   _    |  F1 |  F2 |  F3  |  F4 |  F5 | <=> |  F6 |  F7 |  F8 |  F9 | F10 | F11   | F12 |
-// |     |   +    |  !  |  @  |  #   |  $  |  %  | <=> |  ^  |  &  |  *  |  (  |  )  |  -    |
-//       | SHIFT  |  1  |  2  |  3   |  4  |  5  | <=> |  6  |  7  |  8  |  9  |  0  | SHIFT |
+// ---------------------------------------------------------------------------------------------------
+//       |        |     |     |      |     |     | <=> |     |     |     |     |     |       | 
+// |     |   \    |  1  |  2  |  3   |  4  |  5  | <=> |  6  |  7  |  8  |  9  |  0  |  -    |   =   |
+//       | SHIFT  |  F1 |  F2 |  F3  |  F4 |  F5 | <=> |  F1 |  F7 |  F8 |  F9 | F10 | SHIFT |
 //                            | CTRL | ALT | CMD | <=> |     |     |     |
                         bindings = <
-   &trans &kp UNDER      &kp F1   &kp F2 &kp F3   &kp F4   &kp F5           &kp F6    &kp F7   &kp F8   &kp F9   &kp F10  &kp F11 &mt RGUI F12
-          &mt LCTRL PLUS &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT        &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR &mt RCTRL MINUS
-          &kp LSHFT &kp N1   &kp N2 &kp N3   &kp N4   &kp N5           &kp N6    &kp N7   &kp N8   &kp N9   &kp N0   &kp RSHFT
-                                    &kp LCTRL &kp LALT &kp LWIN       &trans &trans &trans
+   &trans  &kp GRAVE  &trans  &trans  &trans      &trans    &trans          &trans    &trans   &trans   &trans   &kp LBKT  &kp RBKT   &kp EQUAL
+           &kp BSLH   &kp N1  &kp N2  &kp N3      &kp N4    &kp N5          &kp N6    &kp N7   &kp N8   &kp N9   &kp N0    &kp MINUS
+           &kp LSHFT  &kp F1  &kp F2  &kp F3      &kp F4    &kp F5          &kp F6    &kp F7   &kp F8   &kp F9   &kp F10   &kp RSHFT
+                                      &kp LCTRL   &kp LALT  &kp LWIN        &trans    &trans   &trans
                         >;
                 };
 
                 raise_layer {
-// -----------------------------------------------------------------------------------------
-// |     | NMLK |  /  |  7  |  8  |  9  |  -  |   | VOLU| HOME| PRSC| PGUP| SCLK| CLCK|     |
-//       | CTRL |  *  |  4  |  5  |  6  |  +  |   | MUT | LEFT|  UP | RGHT| INS | APP |
-//       |      |  0  |  1  |  2  |  3  |  .  |   | VOLD| END | DOWN| PGDN| PAUS|     |
-//                          |     |     | ADJ |   | ADJ |     |     |
+// -----------------------------------------------------------------------------------------------
+//       |      |     |     |     |     |     | <=> |     |      |  UP  |      |     |     |
+// |     |      |     |     |     |     |     | <=> |     | LEFT | DOWN | RGHT |     |     |     |
+//       |      |     |     |     |     |     | <=> |     |      |      |      |     |     |
+//                          |     |     |     | <=> | ADJ |      |      |
                         bindings = <
-   &trans &kp KP_NUM      &kp KP_SLASH    &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MINUS        &kp C_VOL_UP &kp HOME &kp PSCRN &kp PG_UP &kp SLCK &kp CAPS &trans
-          &mt LCTRL EQUAL &kp KP_MULTIPLY &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS         &kp C_MUTE   &kp LEFT &kp UP    &kp RIGHT &kp INS  &mt RCTRL K_APP
-          &trans          &kp KP_N0       &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_DOT          &kp C_VOL_DN &kp END  &kp DOWN  &kp PG_DN &kp PAUSE_BREAK &trans
-                                                           &trans &trans &lt ADJ RET   &lt ADJ ESC &trans &trans
+   &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans       &trans.   &kp UP    &trans     &trans  &trans  &trans
+           &trans  &trans  &trans  &trans  &trans  &trans        &trans       &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
+           &trans  &trans  &trans  &trans  &trans  &trans        &trans       &trans    &trans    &trans     &trans  &trans
+                                   &trans  &trans  &trans        &lt ADJ ESC  &trans    &trans
                         >;
                 };
                 adjust_layer {
-// -----------------------------------------------------------------------------------------
-// | RST | BLDR |     |     |     |     |     |   |     |     |     |     |     | BLDR | RST |
-//       | BTCLR| BT0 | BT1 | BT2 | BT3 | BT4 |   | BT4 | BT3 | BT2 | BT1 | BT0 | BTCLR|
-//       |      |     |     |     |     |     |   |     |     |     |     |     |      |
-//                          |     |     |     |   |     |     |     |
+// -------------------------------------------------------------------------------------------------
+//         | BLDR  |     |     |     |     |     | <=> |     |     |     |     |     |     |
+// | RST   |       |     |     |     |     |     | <=> |     |     |     |     |     |     | BTCLR | 
+//         |       |     |     |     |     |     | <=> | BT4 | BT3 | BT2 | BT1 | BT0 |     |
+//                             |     |     |     | <=> |     |     |     |
                         bindings = <
-   &sys_reset &bootloader  &none        &none        &none        &none        &none              &none        &none        &none        &none        &none         &bootloader &sys_reset
-          &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4       &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0  &bt BT_CLR
-          &none        &none        &none        &none        &none        &none              &none        &none        &none        &none        &none         &none
-                                                                    &trans &none &trans   &trans &none &trans
+   &sys_reset &bootloader &none  &none  &none   &none  &none.     &none          &none          &none          &none          &none         &none   &bt BT_CLR
+              &none       &none  &none  &none   &none  &none      &none          &none          &none          &none          &none         &none
+              &none       &none  &none  &none   &none  &none      &bt BT_SEL 4   &bt BT_SEL 3   &bt BT_SEL 2   &bt BT_SEL 1  &bt BT_SEL 0   &none
+                                        &trans  &none  &trans     &trans         &none          &trans
                         >;
                 };
         };
