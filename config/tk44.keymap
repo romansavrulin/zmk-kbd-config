@@ -18,19 +18,19 @@
 
 / {
         keymap {
-                compatible = "zmk,keymap";
+                compatible = "zmk,keymap"
 
                 default_layer {
 // --------------------------------------------------------------------------------------------------
-//        |  TAB |  Q  |  W  |  E   |  R  |  T  |   |  Y    |  U    |  I  |  O  |  P  |  [   |
-//    ESC | CAPS |  A  |  S  |  D   |  F  |  G  |   |  H    |  J    |  K  |  L  |  ;  |  /'  | ENTER |
-//        |   ~  |  Z  |  X  |  C   |  V  |  B  |   |  N    |  M    |  ,  |  .  |  /  |  ]   |
-//                           | CTRL | ALT | CMD |   | SPACE | SHIFT | LWR |
+//        |  TAB |  Q  |  W  |  E   |  R  |  T  |   |  Y    |  U    |  I  |  O  |  P  |  BSPC   |
+//    ESC | CAPS |  A  |  S  |  D   |  F  |  G  |   |  H    |  J    |  K  |  L  |  ;  |  /'     | ENTER |
+//        |   ~  |  Z  |  X  |  C   |  V  |  B  |   |  N    |  M    |  ,  |  .  |  /  |  SHIFT  |
+//                           | CTRL | ALT | CMD |   | LWR   | SPACE | RSE |
                         bindings = <
-   &kp ESC &kp TAB &kp Q &kp W &kp E &kp R &kp T &kp Y         &kp U  &kp I     &kp O   &kp P    &kp LBKT &kp ENTER
+   &kp ESC &kp TAB &kp Q &kp W &kp E &kp R &kp T &kp Y         &kp U  &kp I     &kp O   &kp P    &kp BSPC &kp ENTER
             &kp CAPS &kp A &kp S &kp D &kp F &kp G &kp H         &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-            &kp GRAVE  &kp Z &kp X &kp C &kp V &kp B &kp N         &kp M  &kp COMMA &kp DOT &kp FSLH &kp RBKT
-                         &kp LCTRL &kp LALT &kp LWIN &kp SPACE &kp RSHFT &kp LWR
+            &kp GRAVE  &kp Z &kp X &kp C &kp V &kp B &kp N         &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
+                         &kp LCTRL &kp LALT &kp LWIN &lt LWR &kp SPACE &lt RSE
                         >;
                 };
                 lower_layer {
