@@ -72,7 +72,7 @@
    &mt LSHFT ESC    &kp TAB    AS(Q)          AS(W)   AS(E)   AS(R)             AS(T)            AS(Y)                AS(U)            AS(I)           AS(O)     AS(P)           &kp LBKT    &kp ENTER
                     &kp CAPS   AS(A)          AS(S)   AS(D)   AS(F)             AS(G)            AS(H)                AS(J)            AS(K)           AS(L)     AS(SEMI)        AS(SQT)
                     AS(M)      &mt LSHFT Z    AS(Z)   AS(X)   AS(C)             AS(V)            AS(B)                &ht_tp M N       &kp COMMA       &kp DOT   &mt RSHFT FSLH  &kp RSHFT
-                                                              &mt LCTRL SPACE   &mt LALT SPACE   &mt LWIN SPACE       &lt RSE SPACE    &lt LWR BSPC    &lt RSE
+                                                              &mt LCTRL SPACE   &mt LALT SPACE   &mt LWIN SPACE       &lt RSE SPACE    &lt LWR BSPC    &lt RSE SPACE
                         >;
                 };
                 lower_layer {
