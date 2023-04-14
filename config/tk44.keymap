@@ -72,14 +72,14 @@
    &mt LSHFT ESC    &kp TAB    AS(Q)          AS(W)   AS(E)   AS(R)             AS(T)            AS(Y)                AS(U)            AS(I)           AS(O)     AS(P)           &kp LBKT    &kp ENTER
                     &kp CAPS   AS(A)          AS(S)   AS(D)   AS(F)             AS(G)            AS(H)                AS(J)            AS(K)           AS(L)     AS(SEMI)        AS(SQT)
                     AS(M)      &mt LSHFT Z    AS(Z)   AS(X)   AS(C)             AS(V)            AS(B)                &ht_tp M N       &kp COMMA       &kp DOT   &mt RSHFT FSLH  &kp RSHFT
-                                                              &mt LCTRL SPACE   &mt LALT SPACE   &mt LWIN SPACE       &lt RSE SPACE    &lt LWR SPACE   &lt RSE BSPC
+                                                              &mt LCTRL SPACE   &mt LALT SPACE   &mt LWIN SPACE       &lt RSE SPACE    &lt LWR BSPC    &lt RSE
                         >;
                 };
                 lower_layer {
                         bindings = <
 
    &none     &kp GRAVE  &none        &none   &none       &none     &none                   &kp FSLH     &kp N7   &kp N8   &kp N9   &kp LPAR  &kp RPAR   &kp ENTER
-             &kp BSLH   &kp N1       &kp N2  &kp N3      &kp N4    &kp N5                  &kp ASTRK    &kp N4   &kp N5   &kp N6   &kp PLUS  &kp MINUS
+             &kp BSLH   &kp N1       &kp N2  &kp N3      &kp N4    &kp N5                  &kp ASTRK    &kp N4   &kp N5   &kp N6   &kp MINUS &kp PLUS
              &kp F1     &kp LSHFT    &kp F2  &kp F3      &kp F4    &kp F5                  &kp PIPE     &kp N1   &kp N2   &kp N3   &kp LBKT  &kp RBKT
                                              &kp LCTRL   &kp LALT  &kp LWIN                &none        &trans   &kp N0 
                         >;
