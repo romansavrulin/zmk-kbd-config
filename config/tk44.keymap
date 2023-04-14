@@ -13,6 +13,8 @@
 #define RSE 2
 #define ADJ 3
 
+#define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
+
 &lt { quick_tap_ms = <200>; };
 &mt { quick_tap_ms = <200>; };
 
@@ -27,6 +29,27 @@
                     flavor = "balanced";
                     bindings = <&kp>, <&kp>;
                 };
+
+                as: auto_shift {
+                    compatible = "zmk,behavior-hold-tap";
+                    label = "AUTO_SHIFT";
+                    #binding-cells = <2>;
+                    tapping_term_ms = <135>;
+                    quick_tap_ms = <0>;
+                    flavor = "tap-preferred";
+                    bindings = <&kp>, <&kp>;
+                };
+
+                pht: positional_hold_tap {
+                    compatible = "zmk,behavior-hold-tap";
+                    label = "POSITIONAL_HOLD_TAP";
+                    #binding-cells = <2>;
+                    flavor = "hold-preferred";
+                    tapping-term-ms = <400>;
+                    quick-tap-ms = <200>;
+                    bindings = <&kp>, <&kp>;
+                    hold-trigger-key-positions = <1>;    // <---[[the W key]]
+                };
         };
 
         keymap {
@@ -36,9 +59,9 @@
 
                         bindings = <
 
-   &mt LSHFT ESC    &kp TAB    &kp Q          &kp W   &kp E   &kp R             &kp T            &kp Y                &kp U            &kp I           &kp O     &kp P           &bhm LBKT BSPC    &kp ENTER
-                    &kp CAPS   &kp A          &kp S   &kp D   &kp F             &kp G            &kp H                &kp J            &kp K           &kp L     &kp SEMI        &kp SQT
-                    &kp M      &mt LSHFT Z    &kp Z   &kp X   &kp C             &kp V            &kp B                &bhm M N         &kp COMMA       &kp DOT   &mt RSHFT FSLH  &kp RSHFT
+   &mt LSHFT ESC    &kp TAB    AS(Q)          AS(W)   AS(E)   AS(R)             AS(T)            AS(Y)                AS(U)            AS(I)           AS(O)     AS(P)           &bhm LBKT BSPC    &kp ENTER
+                    &kp CAPS   AS(A)          AS(S)   AS(D)   AS(F)             AS(G)            AS(H)                AS(J)            AS(K)           AS(L)     AS(SEMI)        AS(SQT)
+                    AS(M)      &mt LSHFT Z    AS(Z)   AS(X)   AS(C)             AS(V)            AS(B)                &pht M N         &kp COMMA       &kp DOT   &mt RSHFT FSLH  &kp RSHFT
                                                               &mt LCTRL SPACE   &mt LALT SPACE   &mt LWIN SPACE       &lt RSE SPACE    &lt LWR SPACE   &mo LWR
                         >;
                 };
