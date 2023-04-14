@@ -24,10 +24,10 @@
 
                         bindings = <
 
-   &mt LSHFT ESC    &kp TAB    &kp Q          &kp W   &kp E   &kp R       &kp T            &kp Y                &kp U      &kp I       &kp O     &kp P           &kp BSPC    &kp ENTER
-                    &kp CAPS   &kp A          &kp S   &kp D   &kp F       &kp G            &kp H                &kp J      &kp K       &kp L     &kp SEMI        &kp SQT
-                    &kp M      &mt LSHFT Z    &kp Z   &kp X   &kp C       &kp V            &kp B                &mt N M    &kp COMMA   &kp DOT   &mt RSHFT FSLH  &kp RSHFT
-                                                              &kp LCTRL   &mt LALT SPACE   &mt LWIN SPACE       &mo RSE    &kp SPACE   &mo LWR
+   &mt LSHFT ESC    &kp TAB    &kp Q          &kp W   &kp E   &kp R             &kp T            &kp Y                &kp U            &kp I           &kp O     &kp P           &kp BSPC    &kp ENTER
+                    &kp CAPS   &kp A          &kp S   &kp D   &kp F             &kp G            &kp H                &kp J            &kp K           &kp L     &kp SEMI        &kp SQT
+                    &kp M      &mt LSHFT Z    &kp Z   &kp X   &kp C             &kp V            &kp B                &mt M N          &kp COMMA       &kp DOT   &mt RSHFT FSLH  &kp RSHFT
+                                                              &mt LCTRL SPACE   &mt LALT SPACE   &mt LWIN SPACE       &lt RSE SPACE    &lt LWR SPACE   &mo LWR
                         >;
                 };
                 lower_layer {
@@ -43,8 +43,8 @@
                 raise_layer {
                         bindings = <
 
-   &mo ADJ  &none  &none   &none  &none   &none   &none        &none     &none     &kp UP    &none     &none  &none  &none
-            &none  &none   &none  &none   &none   &none        &none     &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none
+   &mo ADJ  &none  &none   &none  &none   &none   &none        &none     &none     &kp UP    &none      &none    &kp BSPC  &none
+            &none  &none   &none  &none   &none   &none        &none     &kp LEFT  &kp DOWN  &kp RIGHT  &none    &none
             &trans &trans  &none  &none   &none   &none        &none     &none     &none     &none      &trans   &trans
                                   &trans  &trans  &trans       &trans    &none     &none
                         >;
