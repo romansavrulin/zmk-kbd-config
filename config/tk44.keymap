@@ -44,7 +44,7 @@
                     compatible = "zmk,behavior-hold-tap";
                     label = "AUTO_SHIFT";
                     #binding-cells = <2>;
-                    tapping_term_ms = <200>;
+                    tapping_term_ms = <250>;
                     quick_tap_ms = <0>;
                     flavor = "tap-preferred";
                     bindings = <&kp>, <&kp>;
@@ -69,16 +69,16 @@
 
                         bindings = <
 
-   &mt LSHFT ESC    &kp TAB    AS(Q)          AS(W)   AS(E)   AS(R)             AS(T)            AS(Y)                AS(U)            AS(I)           AS(O)     AS(P)           &bhm LBKT BSPC    &kp ENTER
+   &mt LSHFT ESC    &kp TAB    AS(Q)          AS(W)   AS(E)   AS(R)             AS(T)            AS(Y)                AS(U)            AS(I)           AS(O)     AS(P)           &kp LBKT    &kp ENTER
                     &kp CAPS   AS(A)          AS(S)   AS(D)   AS(F)             AS(G)            AS(H)                AS(J)            AS(K)           AS(L)     AS(SEMI)        AS(SQT)
-                    AS(M)      &mt LSHFT Z    AS(Z)   AS(X)   AS(C)             AS(V)            AS(B)                &ht_tp M N         &kp COMMA       &kp DOT   &mt RSHFT FSLH  &kp RSHFT
-                                                              &mt LCTRL SPACE   &mt LALT SPACE   &mt LWIN SPACE       &lt RSE SPACE    &lt LWR SPACE   &mo LWR
+                    AS(M)      &mt LSHFT Z    AS(Z)   AS(X)   AS(C)             AS(V)            AS(B)                &ht_tp M N       &kp COMMA       &kp DOT   &mt RSHFT FSLH  &kp RSHFT
+                                                              &mt LCTRL SPACE   &mt LALT SPACE   &mt LWIN SPACE       &lt RSE SPACE    &lt LWR SPACE   &lt RSE BSPC
                         >;
                 };
                 lower_layer {
                         bindings = <
 
-   &none     &kp GRAVE  &none        &none   &none       &none     &none                   &kp FSLH     &kp N7   &kp N8   &kp N9   &kp LPAR  &kp RPAR   &kp EQUAL
+   &none     &kp GRAVE  &none        &none   &none       &none     &none                   &kp FSLH     &kp N7   &kp N8   &kp N9   &kp LPAR  &kp RPAR   &kp ENTER
              &kp BSLH   &kp N1       &kp N2  &kp N3      &kp N4    &kp N5                  &kp ASTRK    &kp N4   &kp N5   &kp N6   &kp PLUS  &kp MINUS
              &kp F1     &kp LSHFT    &kp F2  &kp F3      &kp F4    &kp F5                  &kp PIPE     &kp N1   &kp N2   &kp N3   &kp LBKT  &kp RBKT
                                              &kp LCTRL   &kp LALT  &kp LWIN                &none        &trans   &kp N0 
@@ -88,18 +88,18 @@
                 raise_layer {
                         bindings = <
 
-   &mo ADJ  &none  &none   &none  &none   &none   &none        &none     &none     &kp UP    &none      &none    &kp BSPC  &none
-            &none  &none   &none  &none   &none   &none        &none     &kp LEFT  &kp DOWN  &kp RIGHT  &none    &none
-            &trans &trans  &none  &none   &none   &none        &none     &none     &none     &none      &trans   &trans
+   &none    &none  &none   &none  &none   &none   &mo ADJ      &none     &none     &kp UP    &none      &none     &none  &kp BSPC
+            &none  &none   &none  &none   &none   &none        &none     &kp LEFT  &kp DOWN  &kp RIGHT  &kp UP     &none
+            &trans &trans  &none  &none   &none   &none        &none     &none     &none     &kp LEFT   &kp DOWN  &kp RIGHT
                                   &trans  &trans  &trans       &trans    &none     &none
                         >;
                 };
                 adjust_layer {
                         bindings = <
 
-   &none      &bootloader &none  &none  &none   &none  &none        &none          &none          &none          &none          &none         &none   &bt BT_CLR
+   &none      &bootloader &none  &none  &none   &none  &none        &none          &none          &none          &none          &none         &none   &none
               &none       &none  &none  &none   &none  &none        &none          &none          &none          &none          &none         &none
-              &none       &none  &none  &none   &none  &none        &bt BT_SEL 4   &bt BT_SEL 3   &bt BT_SEL 2   &bt BT_SEL 1  &bt BT_SEL 0   &none
+              &bt BT_CLR  &none  &none  &none   &none  &none        &none          &none          &none          &none          &none         &none
                                         &none   &none  &none        &trans         &none          &trans
                         >;
                 };
