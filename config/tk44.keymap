@@ -40,10 +40,10 @@
 //       | SHIFT  |  F1 |  F2 |  F3  |  F4 |  F5 | <=> |  F1 |  F7 |  F8 |  F9 | F10 | SHIFT |
 //                            | CTRL | ALT | CMD | <=> |     |     |     |
                         bindings = <
-   &trans  &kp GRAVE  &trans  &trans  &trans      &trans    &trans          &trans    &trans   &trans   &trans   &kp LBKT  &kp RBKT   &kp EQUAL
+   &none   &kp GRAVE  &none   &none   &none       &none     &none           &none     &none    &none    &none    &kp LBKT  &kp RBKT   &kp EQUAL
            &kp BSLH   &kp N1  &kp N2  &kp N3      &kp N4    &kp N5          &kp N6    &kp N7   &kp N8   &kp N9   &kp N0    &kp MINUS
            &kp LSHFT  &kp F1  &kp F2  &kp F3      &kp F4    &kp F5          &kp F6    &kp F7   &kp F8   &kp F9   &kp F10   &kp RSHFT
-                                      &kp LCTRL   &kp LALT  &kp LWIN        &trans    &trans   &trans
+                                      &kp LCTRL   &kp LALT  &kp LWIN        &trans    &none    &none 
                         >;
                 };
 
@@ -54,10 +54,10 @@
 //       |      |     |     |     |     |     | <=> |     |      |      |      |     |     |
 //                          |     |     |     | <=> | ADJ |      |      |
                         bindings = <
-   &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans       &trans    &kp UP    &trans     &trans  &trans  &trans
-           &trans  &trans  &trans  &trans  &trans  &trans        &trans       &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
-           &trans  &trans  &trans  &trans  &trans  &trans        &trans       &trans    &trans    &trans     &trans  &trans
-                                   &trans  &trans  &trans        &lt ADJ ESC  &trans    &trans
+   &none   &none  &none  &none  &none  &none  &none        &none        &none     &kp UP    &none     &none  &none  &none
+           &none  &none  &none  &none  &none  &none        &none        &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none
+           &none  &none  &none  &none  &none  &none        &none        &none     &none     &none      &none   &none
+                                &none  &none  &none        &mo ADJ      &none     &trans
                         >;
                 };
                 adjust_layer {
@@ -70,7 +70,7 @@
    &sys_reset &bootloader &none  &none  &none   &none  &none      &none          &none          &none          &none          &none         &none   &bt BT_CLR
               &none       &none  &none  &none   &none  &none      &none          &none          &none          &none          &none         &none
               &none       &none  &none  &none   &none  &none      &bt BT_SEL 4   &bt BT_SEL 3   &bt BT_SEL 2   &bt BT_SEL 1  &bt BT_SEL 0   &none
-                                        &trans  &none  &trans     &trans         &none          &trans
+                                        &none   &none  &none      &trans         &none          &trans
                         >;
                 };
         };
