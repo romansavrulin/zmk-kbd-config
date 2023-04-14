@@ -45,10 +45,10 @@
                 lower_layer {
                         bindings = <
 
-   &none     &kp GRAVE  &none        &none   &none       &none     &none                   &FSLH     &kp N7   &kp N8   &kp N9   &kp LPAR  &kp RPAR   &kp EQUAL
-             &kp BSLH   &kp N1       &kp N2  &kp N3      &kp N4    &kp N5                  &ASTRK    &kp N4   &kp N5   &kp N6   &kp PLUS  &kp MINUS
-             &kp F1     &kp LSHFT    &kp F2  &kp F3      &kp F4    &kp F5                  &PIPE     &kp N1   &kp N2   &kp N3   &kp LBKT  &kp RBKT
-                                             &kp LCTRL   &kp LALT  &kp LWIN                &none     &trans   &kp N0 
+   &none     &kp GRAVE  &none        &none   &none       &none     &none                   &kp FSLH     &kp N7   &kp N8   &kp N9   &kp LPAR  &kp RPAR   &kp EQUAL
+             &kp BSLH   &kp N1       &kp N2  &kp N3      &kp N4    &kp N5                  &kp ASTRK    &kp N4   &kp N5   &kp N6   &kp PLUS  &kp MINUS
+             &kp F1     &kp LSHFT    &kp F2  &kp F3      &kp F4    &kp F5                  &kp PIPE     &kp N1   &kp N2   &kp N3   &kp LBKT  &kp RBKT
+                                             &kp LCTRL   &kp LALT  &kp LWIN                &none        &trans   &kp N0 
                         >;
                 };
 
