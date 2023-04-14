@@ -26,8 +26,8 @@
 
    &mt LSHIFT ESC   &kp TAB    &kp Q          &kp W   &kp E   &kp R       &kp T            &kp Y                &kp U      &kp I       &kp O     &kp P           &kp BSPC    &kp ENTER
                     &kp CAPS   &kp A          &kp S   &kp D   &kp F       &kp G            &kp H                &kp J      &kp K       &kp L     &kp SEMI        &kp SQT
-                    &kp М      &mt LSHIFT Z   &kp Z   &kp X   &kp C       &kp V            &kp B                &mt N M    &kp COMMA   &kp DOT   &mt RSHFT SLH   &kp RSHFT
-                                                      &kp LCTRL   &kp LALT SPACE   &mt LWIN SPACE               &mo RSE    &kp SPACE   &mo LWR
+                    &kp M      &mt LSHFT Z    &kp Z   &kp X   &kp C       &kp V            &kp B                &mt N M    &kp COMMA   &kp DOT   &mt RSHFT SLH   &kp RSHFT
+                                                              &kp LCTRL   &kp LALT SPACE   &mt LWIN SPACE       &mo RSE    &kp SPACE   &mo LWR
                         >;
                 };
                 lower_layer {
