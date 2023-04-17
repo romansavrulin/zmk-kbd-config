@@ -69,9 +69,9 @@
 
                         bindings = <
 
-   &mt LSHFT ESC    &mt TAB GRAVE     AS(Q)          AS(W)   AS(E)   AS(R)             AS(T)            AS(Y)                AS(U)            AS(I)            AS(O)           AS(P)           &mt LBKT BSPC    &kp ENTER
-                    &kp CAPS          AS(A)          AS(S)   AS(D)   AS(F)             AS(G)            AS(H)                AS(J)            AS(K)            AS(L)           AS(SEMI)        AS(SQT)
-                    &mt LSHFT M       &mt LSHFT Z    AS(Z)   AS(X)   AS(C)             AS(V)            AS(B)                &ht_tp M N       AS(COMMA)        AS(DOT)         &mt RSHFT FSLH  &mt RSHFT LBKT 
+   &mt LSHFT ESC    &mt TAB GRAVE        AS(Q)          AS(W)   AS(E)   AS(R)             AS(T)            AS(Y)                AS(U)            AS(I)            AS(O)           AS(P)           &mt LBKT BSPC    &kp ENTER
+                    &kp CAPS             AS(A)          AS(S)   AS(D)   AS(F)             AS(G)            AS(H)                AS(J)            AS(K)            AS(L)           AS(SEMI)        AS(SQT)
+                    &ht_tp LCTRL LSHFT   &mt LSHFT Z    AS(Z)   AS(X)   AS(C)             AS(V)            AS(B)                &ht_tp M N       AS(COMMA)        AS(DOT)         &mt RSHFT FSLH  &mt RSHFT LBKT 
                                                                      &mt LCTRL SPACE   &mt LALT SPACE   &mt LWIN SPACE       &lt RSE SPACE    &lt LWR SPACE    &lt RSE SPACE
                         >;
                 };
