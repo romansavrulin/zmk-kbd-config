@@ -70,15 +70,15 @@
                         bindings = <
 
    &mt LSHFT ESC    &mt GRAVE TAB        AS(Q)          AS(W)   AS(E)   AS(R)             AS(T)            AS(Y)                AS(U)            AS(I)            AS(O)           AS(P)           &mt LBKT BSPC    &kp ENTER
-                    &kp CAPS             AS(A)          AS(S)   AS(D)   AS(F)             AS(G)            AS(H)                AS(J)            AS(K)            AS(L)           AS(SEMI)        AS(SQT)
-                    &kp LCTRL            &mt LSHFT Z    AS(Z)   AS(X)   AS(C)             AS(V)            AS(B)                &ht_tp M N       AS(COMMA)        AS(DOT)         &mt RSHFT FSLH  &mt RSHFT LBKT 
-                                                                     &mt LCTRL SPACE   &mt LALT SPACE   &mt LWIN SPACE       &lt RSE SPACE    &lt LWR SPACE    &lt RSE SPACE
+                    &mt LCTRL CAPS       AS(A)          AS(S)   AS(D)   AS(F)             AS(G)            AS(H)                AS(J)            AS(K)            AS(L)           AS(SEMI)        AS(SQT)
+                    &kp LSHFT            &mt LSHFT Z    AS(Z)   AS(X)   AS(C)             AS(V)            AS(B)                &ht_tp M N       AS(COMMA)        AS(DOT)         &mt RSHFT FSLH  &mt RSHFT LBKT 
+                                                                        &mt LCTRL SPACE   &mt LALT SPACE   &mt LWIN SPACE       &lt RSE SPACE    &lt LWR SPACE    &lt RSE SPACE
                         >;
                 };
                 lower_layer {
                         bindings = <
 
-   &none     &kp GRAVE  &none        &none   &none       &none     &none                   &kp FSLH     &kp N7   &kp N8   &kp N9   &kp LPAR        &mt BSPC RPAR   &kp ENTER
+   &none     &kp GRAVE  &none        &none   &none       &none     &none                   &kp FSLH     &kp N7   &kp N8   &kp N9   &kp LPAR        &mt RPAR BSPC  &kp ENTER
              &kp BSLH   &kp N1       &kp N2  &kp N3      &kp N4    &kp N5                  &kp ASTRK    &kp N4   &kp N5   &kp N6   &kp MINUS       &kp PLUS
              &kp LSHFT  &kp LSHFT    &kp F2  &kp F3      &kp F4    &kp F5                  &kp PIPE     &kp N1   &kp N2   &kp N3   &mt RSHFT LBKT  &mt RSHFT RBKT
                                              &kp LCTRL   &kp LALT  &kp LWIN                &none        &trans   &kp N0 
