@@ -12,6 +12,8 @@
 #define LWR 1
 #define RSE 2
 #define ADJ 3
+#define ALT_NAV 4
+#define CMD_NAV 5
 
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
@@ -69,29 +71,29 @@
 
                         bindings = <
 
-   &mt LSHFT ESC    &mt GRAVE TAB        AS(Q)          AS(W)   AS(E)   AS(R)             AS(T)            AS(Y)                AS(U)            AS(I)            AS(O)           AS(P)           &mt LBKT BSPC    &kp ENTER
-                    &mt LCTRL CAPS       AS(A)          AS(S)   AS(D)   AS(F)             AS(G)            AS(H)                AS(J)            AS(K)            AS(L)           AS(SEMI)        AS(SQT)
-                    &kp LSHFT            &mt LSHFT Z    AS(Z)   AS(X)   AS(C)             AS(V)            AS(B)                &ht_tp M N       AS(COMMA)        AS(DOT)         &mt RSHFT FSLH  &mt RSHFT LBKT 
-                                                                        &mt LCTRL SPACE   &mt LALT SPACE   &mt LWIN SPACE       &lt RSE SPACE    &lt LWR SPACE    &lt RSE SPACE
+   &mt LSHFT ESC    &mt GRAVE TAB        AS(Q)          AS(W)   AS(E)   AS(R)             AS(T)               AS(Y)                AS(U)            AS(I)            AS(O)           AS(P)           &mt LBKT BSPC    &kp ENTER
+                    &mt LCTRL CAPS       AS(A)          AS(S)   AS(D)   AS(F)             AS(G)               AS(H)                AS(J)            AS(K)            AS(L)           AS(SEMI)        AS(SQT)
+                    &kp LSHFT            &mt LSHFT Z    AS(Z)   AS(X)   AS(C)             AS(V)               AS(B)                &ht_tp M N       AS(COMMA)        AS(DOT)         &mt RSHFT FSLH  &mt RSHFT LBKT 
+                                                                        &mt LCTRL SPACE   &lt ALT_NAV SPACE   &mt LWIN SPACE       &lt RSE SPACE    &lt LWR SPACE    &lt RSE SPACE
                         >;
                 };
                 lower_layer {
                         bindings = <
 
-   &none     &kp GRAVE  &none        &none   &none       &none     &none                   &kp FSLH     &kp N7   &kp N8   &kp N9   &kp LPAR        &mt RPAR BSPC  &kp ENTER
-             &kp BSLH   &kp N1       &kp N2  &kp N3      &kp N4    &kp N5                  &kp ASTRK    &kp N4   &kp N5   &kp N6   &kp MINUS       &kp PLUS
-             &kp LSHFT  &kp LSHFT    &kp F2  &kp F3      &kp F4    &kp F5                  &kp PIPE     &kp N1   &kp N2   &kp N3   &mt RSHFT LBKT  &mt RSHFT RBKT
-                                             &kp LCTRL   &kp LALT  &kp LWIN                &none        &trans   &kp N0 
+   &trans     &trans         &none        &none   &none       &none     &none                   &kp FSLH     &kp N7      &kp N8   &kp N9   &kp LPAR        &mt RPAR BSPC  &kp ENTER
+              &kp BSLH       &kp N1       &kp N2  &kp N3      &kp N4    &kp N5                  &kp ASTRK    &kp N4      &kp N5   &kp N6   &kp MINUS       &kp PLUS
+              &trans         &kp LSHFT    &kp F2  &kp F3      &kp F4    &kp F5                  &kp PIPE     &kp N1      &kp N2   &kp N3   &mt RSHFT LBKT  &mt RSHFT RBKT
+                                                  &trans      &trans    &trans                  &kp SPACE    &trans   &kp N0 
                         >;
                 };
 
                 raise_layer {
                         bindings = <
 
-   &none    &none  &none   &none  &none   &none   &mo ADJ      &none     &none     &kp UP    &none      &none     &kp BSPC  &kp ENTER
-            &none  &none   &none  &none   &none   &none        &none     &kp LEFT  &kp DOWN  &kp RIGHT  &kp UP    &none
-            &trans &trans  &none  &none   &none   &none        &none     &none     &none     &kp LEFT   &kp DOWN  &kp RIGHT
-                                  &trans  &trans  &trans       &trans    &none     &none
+   &trans   &trans  &none   &none  &none   &none   &mo ADJ      &none     &none      &kp UP    &none      &none     &kp BSPC  &kp ENTER
+            &none   &none   &none  &none   &none   &none        &none     &kp LEFT   &kp DOWN  &kp RIGHT  &kp UP    &none
+            &trans  &trans  &none  &none   &none   &none        &none     &none      &none     &kp LEFT   &kp DOWN  &kp RIGHT
+                                   &trans  &trans  &trans       &trans    &kp SPACE   .&kp SPACE
                         >;
                 };
                 adjust_layer {
@@ -101,6 +103,15 @@
               &none       &none  &none  &none   &none  &none        &none          &none          &none          &none          &none         &none
               &bt BT_CLR  &none  &none  &none   &none  &none        &none          &none          &none          &none          &none         &none
                                         &none   &none  &none        &trans         &none          &trans
+                        >;
+                };
+                alt_nav_layer {
+                        bindings = <
+
+   &mt LSHFT ESC    &mt GRAVE TAB        AS(Q)          AS(W)   AS(E)   AS(R)             AS(T)            AS(Y)                AS(U)            AS(I)            AS(O)           AS(P)           &mt LBKT BSPC    &kp ENTER
+                    &mt LCTRL CAPS       AS(A)          AS(S)   AS(D)   AS(F)             AS(G)            AS(H)                AS(J)            AS(K)            AS(L)           &kp UP          AS(SQT)
+                    &kp LSHFT            &mt LSHFT Z    AS(Z)   AS(X)   AS(C)             AS(V)            AS(B)                &ht_tp M N       AS(COMMA)        &kp LEFT        &kp DOWN        &kp RIGHT 
+                                                                        &mt LCTRL SPACE   &kp LALT         &mt LWIN SPACE       &lt RSE SPACE    &lt LWR SPACE    &lt RSE SPACE
                         >;
                 };
         };
