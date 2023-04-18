@@ -70,7 +70,7 @@
                     compatible = "zmk,behavior-hold-tap";
                     label = "AUTO_SHIFT";
                     #binding-cells = <2>;
-                    tapping_term_ms = <250>;
+                    tapping_term_ms = <230>;
                     quick_tap_ms = <0>;
                     flavor = "tap-preferred";
                     bindings = <&kp>, <&kp>;
@@ -95,7 +95,7 @@
 
                         bindings = <
 
-   &mt LSHFT ESC    &mt GRAVE TAB        AS(Q)  AS(W)   AS(E)     AS(R)             AS(T)               AS(Y)            AS(U)            AS(I)            AS(O)           AS(P)           &mt LBKT BSPC    &mt RSHFT ENTER
+   &mt LSHFT ESC    &mt GRAVE TAB        AS(Q)  AS(W)   AS(E)     AS(R)             AS(T)               AS(Y)            AS(U)            AS(I)            AS(O)           AS(P)           &mt LBKT BSPC    &mt BSLH ENTER
                     &mt LCTRL CAPS       AS(A)  AS(S)   AS(D)     AS(F)             AS(G)               AS(H)            AS(J)            AS(K)            AS(L)           AS(SEMI)        AS(SQT)
                     &kp LSHFT            AS(M)  AS(Z)   AS(X)     AS(C)             AS(V)               AS(B)            AS(N)            AS(COMMA)        AS(DOT)         AS(FSLH)        &mt RSHFT LBKT 
                                                                   &mt LCTRL SPACE   &mt LALT SPACE      &mt LWIN SPACE   &lt RSE SPACE    &lt LWR SPACE    &lt R_CTLL SPACE
@@ -106,7 +106,7 @@
 
    &trans     &trans         &kp LS(N1)   &kp LS(N2)  &kp LS(N3)  &kp LS(N4)     &kp LS(N5)              &kp LS(N6)        &kp LS(N7)  &kp LS(N8)   &kp LS(N9)   &kp LS(N0)     &alt_del            &cmd_del
               &none          &none        &none       &none       &none          &none                   &none             &none       &none        &none        AS(MINUS)      AS(EQUAL)
-              &trans         &kp LSHFT    &none       &none       &none          &none                   &kp PIPE2         &none       &kp LT       &kp GT       AS(RBKT)       AS(LBKT)
+              &trans         &kp LSHFT    &none       &none       &none          &none                   AS(BSLH)          &none       &kp LT       &kp GT       AS(RBKT)       AS(LBKT)
                                                       &trans      &trans         &trans                  &kp SPACE         &trans      &trans 
                         >;
                 };
@@ -114,10 +114,10 @@
                 raise_layer {
                         bindings = <
 
-   &trans   &trans  &none   &none  &none   &none   &mo ADJ      &kp N7    &kp N8     &kp N9    &kp KP_MINUS  &kp KP_DIVIDE     &alt_del  &cmd_del
-            &none   &none   &none  &none   &none   &none        &kp N4    &kp N5     &kp N6    &kp KP_PLUS   &kp KP_MULTIPLY   &none
-            &trans  &trans  &none  &none   &none   &none        &kp N1    &kp N2     &kp N3    &kp KP_DOT    &none             &none
-                                   &trans  &trans  &trans       &trans    &kp SPACE  &kp N0
+   &trans   &trans  &none   &none  &none   &none   &mo ADJ      &kp N7    &kp N8     &kp N9     &kp KP_MINUS  &kp KP_DIVIDE     &cmd_del  &alt_del
+            &none   &none   &none  &none   &none   &none        &kp N4    &kp N5     &kp N6     &kp KP_PLUS   &kp KP_MULTIPLY   &none
+            &trans  &trans  &none  &none   &none   &none        &kp N1    &kp N2     &kp N3     &kp N0        &none             &none
+                                   &trans  &trans  &trans       &trans    &kp SPACE  &kp KP_DOT
                         >;
                 };
                 adjust_layer {
