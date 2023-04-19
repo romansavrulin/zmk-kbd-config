@@ -33,6 +33,17 @@
                         ;
                 };
 
+                cmd_enter: cmd_enter {
+                    label = "cmd_enter";
+                    compatible = "zmk,behavior-macro";
+                    #binding-cells = <0>;
+                    bindings
+                        = <&macro_press &kp LWIN>
+                        , <&macro_tap &kp ENTER>
+                        , <&macro_release &kp LWIN>
+                        ;
+                };
+
                 alt_del: alt_del {
                     label = "alt_del";
                     compatible = "zmk,behavior-macro";
@@ -128,7 +139,7 @@
                 raise_layer {
                         bindings = <
 
-   &trans   &trans  &none   &none  &none   &none   &mo ADJ      &kp N7    &kp N8     &kp N9     &kp KP_PLUS  &kp KP_MULTIPLY    &cmd_del  &kp ENTER
+   &trans   &trans  &none   &none  &none   &none   &mo ADJ      &kp N7    &kp N8     &kp N9     &kp KP_PLUS  &kp KP_MULTIPLY    &cmd_del  &cmd_enter
             &none   &none   &none  &none   &none   &none        &kp N4    &kp N5     &kp N6     &kp KP_MINUS &kp KP_DIVIDE      &none
             &trans  &trans  &none  &none   &none   &none        &kp N1    &kp N2     &kp N3     &kp N0       &none              &none
                                    &trans  &trans  &trans       &trans    &kp SPACE  &kp KP_DOT
