@@ -49,9 +49,11 @@
                     compatible = "zmk,behavior-macro";
                     #binding-cells = <0>;
                     bindings
-                        = <&macro_tap &kp CAPS>
-                        , <&macro_tap &kp AT>
+                        = <&macro_tap_time 50>
+                        , <&macro_tap &kp CAPS &kp AT>
                         , <&macro_pause_for_release>
+                        , <&macro_wait_time 300>
+                        , <&macro_tap_time 150>
                         , <&macro_tap &kp CAPS>
                         ;
                 };
