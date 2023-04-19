@@ -97,7 +97,7 @@
 
    &mt LSHFT ESC    &mt GRAVE TAB        AS(Q)  AS(W)   AS(E)     AS(R)             AS(T)               AS(Y)            AS(U)            AS(I)            AS(O)           AS(P)           &mt LBKT BSPC    &mt BSLH ENTER
                     &mt LCTRL CAPS       AS(A)  AS(S)   AS(D)     AS(F)             AS(G)               AS(H)            AS(J)            AS(K)            AS(L)           AS(SEMI)        AS(SQT)
-                    &kp LSHFT            AS(M)  AS(Z)   AS(X)     AS(C)             AS(V)               AS(B)            AS(N)            AS(COMMA)        AS(DOT)         AS(FSLH)        &mt RSHFT LBKT 
+                    &kp LSHFT            AS(M)  AS(Z)   AS(X)     AS(C)             AS(V)               AS(B)            AS(N)            AS(COMMA)        AS(DOT)         AS(FSLH)        AS(LBKT)
                                                                   &mt LCTRL SPACE   &mt LALT SPACE      &mt LWIN SPACE   &lt RSE SPACE    &lt LWR SPACE    &lt R_CTLL SPACE
                         >;
                  };
@@ -133,9 +133,9 @@
                 right_ctrl {
                         bindings = <
 
-   &trans   &trans  &none   &none  &none   &none   &mo ADJ      &kp F9          &kp F10       &kp F11   &kp F12    &kp K_MUTE  &kp UP  &kp RIGHT
+   &trans   &trans  &none   &none  &none   &none   &mo ADJ      &kp F9          &kp F10       &kp F11   &kp F12    &kp PG_UP   &kp UP  &kp RIGHT
             &none   &none   &none  &none   &none   &none        &kp F5          &kp F6        &kp F7    &kp F8     &kp LEFT    &kp DOWN
-            &trans  &trans  &none  &none   &none   &none        &kp F1          &kp F2        &kp F3    &kp F4     &kp PG_UP   &kp PG_DN
+            &trans  &trans  &none  &none   &none   &none        &kp F1          &kp F2        &kp F3    &kp F4     &kp PG_DN   &kp K_MUTE
                                    &trans  &trans  &trans       &kp C_VOL_DN    &kp C_VOL_UP  &none
                         >;
                 };
