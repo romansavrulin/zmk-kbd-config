@@ -116,7 +116,7 @@
                     compatible = "zmk,behavior-caps-word";
                     label = "PROG_CAPS";
                     #binding-cells = <0>;
-                    continue-list = <UNDERSCORE BACKSPACE DELETE MINUS>;
+                    continue-list = <UNDERSCORE BACKSPACE DELETE MINUS CAPS>;
                 };
         };
 
