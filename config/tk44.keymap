@@ -137,7 +137,7 @@
 
                         bindings = <
 
-   &mt LSHFT ESC    &mt GRAVE TAB        AS(Q)  AS(W)   AS(E)     AS(R)             AS(T)               AS(Y)            AS(U)            AS(I)            AS(O)           AS(P)           &mt LBKT BSPC    &mt BSLH ENTER
+   &mt LSHFT ESC    &mt GRAVE TAB        AS(Q)  AS(W)   AS(E)     AS(R)             AS(T)               AS(Y)            AS(U)            AS(I)            AS(O)           AS(P)           &kp BSPC    &mt BSLH ENTER
                     &mt LCTRL CAPS       AS(A)  AS(S)   AS(D)     AS(F)             AS(G)               AS(H)            AS(J)            AS(K)            AS(L)           AS(SEMI)        AS(SQT)
                     &kp LSHFT            AS(M)  AS(Z)   AS(X)     AS(C)             AS(V)               AS(B)            AS(N)            AS(COMMA)        AS(DOT)         AS(FSLH)        AS(LBKT)
                                                                   &mt LCTRL SPACE   &mt LALT SPACE      &mt LWIN SPACE   &lt RSE SPACE    &lt LWR SPACE    &lt R_CTLL SPACE
