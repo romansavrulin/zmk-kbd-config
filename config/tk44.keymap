@@ -17,8 +17,8 @@
 
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
-&lt { quick_tap_ms = <200>; };
-&mt { quick_tap_ms = <200>; };
+&lt { quick_tap_ms = <150>; };
+&mt { quick_tap_ms = <150>; };
 
 / {
         macros {
@@ -71,37 +71,44 @@
         };
 
         behaviors {
-                bhm: balanced_homerow_mods {
-                    compatible = "zmk,behavior-hold-tap";
-                    label = "HOMEROW_MODS";
-                    #binding-cells = <2>;
-                    tapping-term-ms = <200>;    // <---[[moderate duration]]
-                    quick-tap-ms = <0>;
-                    flavor = "balanced";
-                    bindings = <&kp>, <&kp>;
-                };
-
-                ht_tp: tp_homerow_mods {
-                    compatible = "zmk,behavior-hold-tap";
-                    label = "TP_HOMEROW_MODS";
-                    #binding-cells = <2>;
-                    tapping-term-ms = <200>;    // <---[[moderate duration]]
-                    quick-tap-ms = <0>;
-                    flavor = "tap-preferred";
-                    bindings = <&kp>, <&kp>;
-                };
-
                 as: auto_shift {
                     compatible = "zmk,behavior-hold-tap";
                     label = "AUTO_SHIFT";
                     #binding-cells = <2>;
-                    tapping_term_ms = <180>;   // <-----[[used now]]
+                    tapping_term_ms = <150>;   // <-----[[used now]]
                     quick_tap_ms = <0>;
                     flavor = "tap-preferred";
                     bindings = <&kp>, <&kp>;
                 };
 
-                pht: positional_hold_tap {
+                prog_caps: behavior_prog_caps_word {
+                    compatible = "zmk,behavior-caps-word";
+                    label = "PROG_CAPS";
+                    #binding-cells = <0>;
+                    continue-list = <UNDERSCORE BACKSPACE DELETE MINUS CAPS>;
+                };
+
+                bhm: balanced_homerow_mods {            // <---[[UNUSED]]
+                    compatible = "zmk,behavior-hold-tap";
+                    label = "HOMEROW_MODS";
+                    #binding-cells = <2>;
+                    tapping-term-ms = <200>;            // <---[[moderate duration]]
+                    quick-tap-ms = <0>;
+                    flavor = "balanced";
+                    bindings = <&kp>, <&kp>;
+                };
+
+                ht_tp: tp_homerow_mods {                // <---[[UNUSED]]
+                    compatible = "zmk,behavior-hold-tap";
+                    label = "TP_HOMEROW_MODS";
+                    #binding-cells = <2>;
+                    tapping-term-ms = <200>;            // <---[[moderate duration]]
+                    quick-tap-ms = <0>;
+                    flavor = "tap-preferred";
+                    bindings = <&kp>, <&kp>;
+                };
+
+                pht: positional_hold_tap {              // <---[[UNUSED]]
                     compatible = "zmk,behavior-hold-tap";
                     label = "POSITIONAL_HOLD_TAP";
                     #binding-cells = <2>;
@@ -110,13 +117,6 @@
                     quick-tap-ms = <200>;
                     bindings = <&kp>, <&kp>;
                     hold-trigger-key-positions = <1>;    // <---[[the W key]]
-                };
-
-                prog_caps: behavior_prog_caps_word {
-                    compatible = "zmk,behavior-caps-word";
-                    label = "PROG_CAPS";
-                    #binding-cells = <0>;
-                    continue-list = <UNDERSCORE BACKSPACE DELETE MINUS CAPS>;
                 };
         };
 
@@ -168,7 +168,7 @@
    &trans   &trans  &none   &none  &none   &none   &mo ADJ      &kp F9          &kp F10       &kp F11   &kp F12    &prog_caps     &kp UP        &kp RIGHT
             &none   &none   &none  &none   &none   &none        &kp F5          &kp F6        &kp F7    &kp F8     &kp LEFT       &kp DOWN
             &trans  &trans  &none  &none   &none   &none        &kp F1          &kp F2        &kp F3    &kp F4     &kp C_VOL_DN   &kp C_VOL_UP
-                                   &trans  &trans  &trans       &none           &kp K_MUTE    &none
+                                   &trans  &trans  &trans       &key_repeat     &kp K_MUTE    &none
                         >;
                 };
         };
