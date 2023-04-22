@@ -127,10 +127,10 @@
                 lower_layer {
                         bindings = <
 
-   &trans     &trans         &kp LS(N1)   &kp LS(N2)  &kp LS(N3)  &kp LS(N4)     &kp LS(N5)              &kp LS(N6)        &kp LS(N7)     &kp LS(N8)   &kp LS(N9)      &kp LS(N0)     &kp LA(BSPC)         &mt BSLH ENTER
-              &kp GRAVE      &none        &at_en      &none       &none          &none                   &kp KP_DIVIDE     &kp MINUS      &kp EQUAL    &kp LBKT        &kp RBKT       &none
-              &trans         &none        &none       &none       &none          &none                   &kp BSLH          &prog_caps_en  &prog_caps   &gt_en          &none          &none
-                                                      &trans      &trans         &trans                  &kp SPACE         &trans         &trans 
+   &trans     &trans         &kp LS(N1)   &kp LS(N2)  &kp LS(N3)  &kp LS(N4)     &kp LS(N5)              &kp LS(N6)        &kp LS(N7)     &kp LS(N8)      &kp LS(N9)      &kp LS(N0)     &kp LA(BSPC)         &mt BSLH ENTER
+              &kp GRAVE      &none        &at_en      &none       &none          &none                   &kp KP_DIVIDE     &kp MINUS      &kp EQUAL       &kp LBKT        &kp RBKT       &none
+              &trans         &none        &none       &none       &none          &none                   &kp BSLH          &prog_caps     &prog_caps_en   &gt_en          &none          &none
+                                                      &trans      &trans         &trans                  &kp SPACE         &trans         &kp SPACE
                         >;
                 };
 
@@ -150,15 +150,15 @@
               &none       &none  &none  &none   &none  &none        &none          &none          &none          &none          &none         &none
               &bt BT_CLR  &none  &none  &none   &none  &none        &none          &none          &none          &none          &none         &none
                                         &none   &none  &none        &trans         &none          &trans
-                        >;
+                        >
                 };
 
                 right_ctrl {
                         bindings = < 
-
-   &trans   &trans  &kp F9  &kp F10  &kp F11   &kp F12  &none           &none      &kp K_MUTE    &kp C_VOL_UP     &kp BSPC       &kp UP     &kp RIGHT       &kp ENTER  
-            &none   &kp F5  &kp F6   &kp F7    &kp F8   &none           &none      &none         &kp C_VOL_DN     &kp LEFT       &kp DOWN   &kp LA(RIGHT)
-            &trans  &kp F1  &kp F2   &kp F3    &kp F4   &none           &none      &none         &none            &kp LA(LEFT)   &kp SPACE  &none
+  
+   &trans   &trans  &kp F9  &kp F10  &kp F11   &kp F12  &none           &none      &kp K_MUTE    &kp C_VOL_UP     &kp BSPC       &kp UP        &kp RIGHT       &kp ENTER  
+            &none   &kp F5  &kp F6   &kp F7    &kp F8   &none           &none      &none         &kp C_VOL_DN     &kp LEFT       &kp DOWN      &kp LA(RIGHT)
+            &trans  &kp F1  &kp F2   &kp F3    &kp F4   &none           &none      &none         &none            &kp LA(LEFT)   &kp LG(LEFT)  &kp LG(RIGHT)
                                      &trans    &trans   &trans          &kp SPACE  &kp SPACE     &none
                         >;
                 };
