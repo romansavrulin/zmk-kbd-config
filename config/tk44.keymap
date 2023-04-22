@@ -189,9 +189,9 @@
                 right_ctrl {
                         bindings = < 
 
-   &trans   &trans  &kp F9  &kp F10  &kp F11   &kp F12  &none           &none      &kp MUTE      &kp C_VOL_UP     &key_repeat  &kp SPACE   &kp BSPC    &kp ENTER  
-            &none   &kp F5  &kp F6   &kp F7    &kp F8   &none           &none      &none         &kp C_VOL_DN     &none        &kp UP      &kp RIGHT
-            &trans  &kp F1  &kp F2   &kp F3    &kp F4   &none           &none      &none         &none            &kp LEFT     &kp DOWN    &kp SPACE
+   &trans   &trans  &kp F9  &kp F10  &kp F11   &kp F12  &none           &none      &kp MUTE      &kp C_VOL_UP     &kp BSPC       &kp UP     &kp RIGHT       &kp ENTER  
+            &none   &kp F5  &kp F6   &kp F7    &kp F8   &none           &none      &none         &kp C_VOL_DN     &kp LEFT       &kp DOWN   &kp LA(RIGHT)
+            &trans  &kp F1  &kp F2   &kp F3    &kp F4   &none           &none      &none         &none            &kp LA(LEFT)   &kp SPACE  &none
                                      &trans    &trans   &trans          &kp SPACE  &kp SPACE     &none
                         >;
                 };
