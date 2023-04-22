@@ -22,39 +22,6 @@
 
 / {
         macros {
-                cmd_del: cmd_del {
-                    label = "cmd_del";
-                    compatible = "zmk,behavior-macro";
-                    #binding-cells = <0>;
-                    bindings
-                        = <&macro_press &kp RWIN>
-                        , <&macro_tap &kp BSPC>
-                        , <&macro_release &kp RWIN>
-                        ;
-                };
-
-                cmd_enter: cmd_enter {
-                    label = "cmd_enter";
-                    compatible = "zmk,behavior-macro";
-                    #binding-cells = <0>;
-                    bindings
-                        = <&macro_press &kp LWIN>
-                        , <&macro_tap &kp ENTER>
-                        , <&macro_release &kp LWIN>
-                        ;
-                };
-
-                alt_del: alt_del {
-                    label = "alt_del";
-                    compatible = "zmk,behavior-macro";
-                    #binding-cells = <0>;
-                    bindings
-                        = <&macro_press &kp RALT>
-                        , <&macro_tap &kp BSPC>
-                        , <&macro_release &kp RALT>
-                        ;
-                };
-
                 gt_en: gt_en {
                     label = "gt_en";
                     compatible = "zmk,behavior-macro";
@@ -160,7 +127,7 @@
                 lower_layer {
                         bindings = <
 
-   &trans     &trans         &kp LS(N1)   &kp LS(N2)  &kp LS(N3)  &kp LS(N4)     &kp LS(N5)              &kp LS(N6)        &kp LS(N7)     &kp LS(N8)   &kp LS(N9)      &kp LS(N0)     &alt_del         &mt BSLH ENTER
+   &trans     &trans         &kp LS(N1)   &kp LS(N2)  &kp LS(N3)  &kp LS(N4)     &kp LS(N5)              &kp LS(N6)        &kp LS(N7)     &kp LS(N8)   &kp LS(N9)      &kp LS(N0)     &kp LA(BSPC)         &mt BSLH ENTER
               &kp GRAVE      &none        &at_en      &none       &none          &none                   &kp KP_DIVIDE     &kp MINUS      &kp EQUAL    &kp LBKT        &kp RBKT       &none
               &trans         &none        &none       &none       &none          &none                   &kp BSLH          &prog_caps_en  &prog_caps   &gt_en          &none          &none
                                                       &trans      &trans         &trans                  &kp SPACE         &trans         &trans 
@@ -170,7 +137,7 @@
                 raise_layer {
                         bindings = <
 
-   &trans   &trans  &none   &none  &none   &none   &mo ADJ      &kp KP_N7    &kp KP_N8     &kp KP_N9     &kp KP_PLUS   &kp KP_MULTIPLY    &cmd_del  &cmd_enter
+   &trans   &trans  &none   &none  &none   &none   &mo ADJ      &kp KP_N7    &kp KP_N8     &kp KP_N9     &kp KP_PLUS   &kp KP_MULTIPLY    &kp LG(BSPC)  &LG(ENTER)
             &none   &none   &none  &none   &none   &none        &kp KP_N4    &kp KP_N5     &kp KP_N6     &kp KP_MINUS  &kp KP_DIVIDE      &none
             &trans  &none   &none  &none   &none   &none        &kp KP_N1    &kp KP_N2     &kp KP_N3     &kp KP_N0     &none              &none
                                    &trans  &trans  &trans       &trans       &kp SPACE     &kp KP_DOT
@@ -189,7 +156,7 @@
                 right_ctrl {
                         bindings = < 
 
-   &trans   &trans  &kp F9  &kp F10  &kp F11   &kp F12  &none           &none      &kp MUTE      &kp C_VOL_UP     &kp BSPC       &kp UP     &kp RIGHT       &kp ENTER  
+   &trans   &trans  &kp F9  &kp F10  &kp F11   &kp F12  &none           &none      &kp K_MUTE    &kp C_VOL_UP     &kp BSPC       &kp UP     &kp RIGHT       &kp ENTER  
             &none   &kp F5  &kp F6   &kp F7    &kp F8   &none           &none      &none         &kp C_VOL_DN     &kp LEFT       &kp DOWN   &kp LA(RIGHT)
             &trans  &kp F1  &kp F2   &kp F3    &kp F4   &none           &none      &none         &none            &kp LA(LEFT)   &kp SPACE  &none
                                      &trans    &trans   &trans          &kp SPACE  &kp SPACE     &none
