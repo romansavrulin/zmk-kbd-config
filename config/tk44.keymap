@@ -189,20 +189,10 @@
                 right_ctrl {
                         bindings = < 
 
-   &trans   &trans  &kp F9  &kp F10  &kp F11   &kp F12  &none           &none     &none         &kp C_VOL_UP     &key_repeat  &kp SPACE   &kp BSPC    &kp ENTER  
-            &none   &kp F5  &kp F6   &kp F7    &kp F8   &none           &none     &none         &kp C_VOL_DN     &none        &kp UP      &kp RIGHT
-            &trans  &kp F1  &kp F2   &kp F3    &kp F4   &none           &none     &none         &none            &kp LEFT     &kp DOWN    &kp SPACE
-                                     &trans    &trans   &trans          &none     &kp K_MUTE    &none
-                        >;
-                };
-
-                right_ctrl_2 {
-                        bindings = < 
-
-   &trans   &trans  &none   &none  &none   &none   &mo ADJ      &kp F9          &kp F10       &kp F11   &kp F12    &kp SPACE      &kp UP        &kp RIGHT  
-            &none   &none   &none  &none   &none   &none        &kp F5          &kp F6        &kp F7    &kp F8     &kp LEFT       &kp DOWN
-            &trans  &trans  &none  &none   &none   &none        &kp F1          &kp F2        &kp F3    &kp F4     &kp C_VOL_DN   &kp C_VOL_UP
-                                   &trans  &trans  &trans       &key_repeat     &kp K_MUTE    &none
+   &trans   &trans  &kp F9  &kp F10  &kp F11   &kp F12  &none           &none      &kp MUTE      &kp C_VOL_UP     &key_repeat  &kp SPACE   &kp BSPC    &kp ENTER  
+            &none   &kp F5  &kp F6   &kp F7    &kp F8   &none           &none      &none         &kp C_VOL_DN     &none        &kp UP      &kp RIGHT
+            &trans  &kp F1  &kp F2   &kp F3    &kp F4   &none           &none      &none         &none            &kp LEFT     &kp DOWN    &kp SPACE
+                                     &trans    &trans   &trans          &kp SPACE  &kp SPACE     &none
                         >;
                 };
         };
