@@ -62,21 +62,29 @@
         };
 
         behaviors {
-                as: auto_shift {
-                    compatible = "zmk,behavior-hold-tap";
-                    label = "AUTO_SHIFT";
-                    #binding-cells = <2>;
-                    tapping_term_ms = <150>;   // <-----[[used now]]
-                    quick_tap_ms = <0>;
-                    flavor = "tap-preferred";
-                    bindings = <&kp>, <&kp>;
-                };
-
                 prog_caps: behavior_prog_caps_word {
                     compatible = "zmk,behavior-caps-word";
                     label = "PROG_CAPS";
                     #binding-cells = <0>;
                     continue-list = <UNDERSCORE BACKSPACE DELETE MINUS CAPS>;
+                };
+
+                td_bspc: td_bspc {
+                    compatible = "zmk,behavior-tap-dance";
+                    label = "td_bspc";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <200>;
+                    bindings = <&kp LBKT>, <&kp BSPC>;
+                };
+
+                as: auto_shift {
+                    compatible = "zmk,behavior-hold-tap";
+                    label = "AUTO_SHIFT";
+                    #binding-cells = <2>;
+                    tapping_term_ms = <150>;   // <-----[[UNUSED]]
+                    quick_tap_ms = <0>;
+                    flavor = "tap-preferred";
+                    bindings = <&kp>, <&kp>;
                 };
 
                 bhm: balanced_homerow_mods {            // <---[[UNUSED]]
@@ -118,7 +126,7 @@
 
                         bindings = <
 
-   &mt LSHFT ESC    &mt GRAVE TAB        &kp Q  &kp W   &kp E     &kp R             &kp T               &kp Y            &kp U            &kp I            &kp O           &kp P           &kp BSPC    &mt BSLH ENTER
+   &mt LSHFT ESC    &mt GRAVE TAB        &kp Q  &kp W   &kp E     &kp R             &kp T               &kp Y            &kp U            &kp I            &kp O           &kp P           &td_bspc    &mt BSLH ENTER
                     &mt LCTRL CAPS       &kp A  &kp S   &kp D     &kp F             &kp G               &kp H            &kp J            &kp K            &kp L           &kp SEMI        &kp SQT
                     &kp LSHFT            &kp M  &kp Z   &kp X     &kp C             &kp V               &kp B            &kp N            &kp COMMA        &kp DOT         &kp FSLH        &kp LBKT
                                                                   &mt LCTRL SPACE   &mt LALT SPACE      &mt LWIN SPACE   &lt RSE SPACE    &lt LWR SPACE    &lt R_CTLL SPACE
@@ -127,8 +135,8 @@
                 lower_layer {
                         bindings = <
 
-   &trans     &trans         &kp LS(N1)   &kp LS(N2)  &kp LS(N3)  &kp LS(N4)     &kp LS(N5)              &kp LS(N6)        &kp LS(N7)     &kp LS(N8)      &kp LS(N9)      &kp LS(N0)     &kp LA(BSPC)         &mt BSLH ENTER
-              &kp GRAVE      &none        &at_en      &none       &none          &none                   &kp KP_DIVIDE     &kp MINUS      &kp EQUAL       &kp LBKT        &kp RBKT       &none
+   &trans     &kp GRAVE      &kp LS(N1)   &kp LS(N2)  &kp LS(N3)  &kp LS(N4)     &kp LS(N5)              &kp LS(N6)        &kp LS(N7)     &kp LS(N8)      &kp LS(N9)      &kp LS(N0)     &kp LA(BSPC)         &mt BSLH ENTER
+              &none          &none        &at_en      &none       &none          &none                   &kp KP_DIVIDE     &kp MINUS      &kp EQUAL       &kp LBKT        &kp RBKT       &none
               &trans         &none        &none       &none       &none          &none                   &kp BSLH          &prog_caps     &prog_caps_en   &gt_en          &none          &none
                                                       &trans      &trans         &trans                  &kp SPACE         &trans         &kp SPACE
                         >;
