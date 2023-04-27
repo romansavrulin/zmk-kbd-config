@@ -125,28 +125,36 @@
                     continue-list = <UNDERSCORE BACKSPACE DELETE MINUS CAPS>;
                 };
 
-                td_lbkt: td_lbkt {
+                td_bspc_lbkt: td_bspc_lbkt {
                     compatible = "zmk,behavior-tap-dance";
-                    label = "td_lbkt";
+                    label = "td_bspc_lbkt";
                     #binding-cells = <0>;
                     tapping-term-ms = <180>;
                     bindings = <&kp BSPC>, <&kp LBKT>;
                 };
 
-                td_m: td_m {
+                td_m_n: td_m_n {
                     compatible = "zmk,behavior-tap-dance";
-                    label = "td_m";
+                    label = "td_m_n";
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
                     bindings = <&kp N>, <&kp M>;
                 };
 
-                td_p: td_p {
+                td_p_lbkt: td_p_lbkt {
                     compatible = "zmk,behavior-tap-dance";
-                    label = "td_p";
+                    label = "td_p_lbkt";
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
                     bindings = <&kp P>, <&kp LBKT>;
+                };
+
+                td_sqt_lbkt: td_sqt_lbkt {
+                    compatible = "zmk,behavior-tap-dance";
+                    label = "td_sqt_lbkt";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <200>;
+                    bindings = <&kp SQT>, <&kp LBKT>;
                 };
 
                 as: auto_shift {
@@ -198,9 +206,9 @@
 
                         bindings = <
 
-   &mt LSHFT ESC    &mt GRAVE TAB        &kp Q  &kp W   &kp E     &kp R             &kp T               &kp Y            &kp U            &kp I            &kp O           &td_p           &mt LBKT BSPC    &mt BSLH ENTER
-                    &mt LCTRL CAPS       &kp A  &kp S   &kp D     &kp F             &kp G               &kp H            &kp J            &kp K            &kp L           &kp SEMI        &kp SQT
-                    &kp LSHFT            &kp M  &kp Z   &kp X     &kp C             &kp V               &kp B            &td_m            &kp COMMA        &kp DOT         &kp FSLH        &kp RBKT
+   &mt LSHFT ESC    &mt GRAVE TAB        &kp Q  &kp W   &kp E     &kp R             &kp T               &kp Y            &kp U            &kp I            &kp O           &td_p_lbkt      &mt LBKT BSPC    &mt BSLH ENTER
+                    &mt LCTRL CAPS       &kp A  &kp S   &kp D     &kp F             &kp G               &kp H            &kp J            &kp K            &kp L           &kp SEMI        &td_sqt_lbkt
+                    &kp LSHFT            &kp M  &kp Z   &kp X     &kp C             &kp V               &kp B            &td_m_n          &kp COMMA        &kp DOT         &kp FSLH        &kp RBKT
                                                                   &mt LCTRL SPACE   &mt LALT SPACE      &mt LWIN SPACE   &lt RSE SPACE    &lt LWR SPACE    &lt R_CTLL SPACE
                         >;
                  };
