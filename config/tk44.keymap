@@ -13,6 +13,7 @@
 #define RSE    2
 #define ADJ    3
 #define R_CTLL 4
+#define DEL_LR 5
 
 
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
@@ -125,6 +126,17 @@
                         , <&macro_tap &kp N &kp M>
                         ;
                 };
+
+                bspc_m: bspc_m {
+                    label = "bspc_m";
+                    compatible = "zmk,behavior-macro";
+                    #binding-cells = <0>;
+                    bindings
+                        = <&macro_tap_time 50>
+                        , <&macro_tap &kp BSPC>
+                        , <&to DEL_LR>
+                        ;
+                };
         };
 
         behaviors {
@@ -141,6 +153,14 @@
                     #binding-cells = <0>;
                     tapping-term-ms = <180>;
                     bindings = <&kp BSPC>, <&kp LBKT>;
+                };
+
+                td_bspc: td_bspc {
+                    compatible = "zmk,behavior-tap-dance";
+                    label = "td_bspc";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <250>;
+                    bindings = <&kp LBKT>, <&bspc_m>;
                 };
 
                 td_n_m_nm: td_n_m_nm {
@@ -216,9 +236,9 @@
 
                         bindings = <
 
-   &mt LSHFT ESC    &mt GRAVE TAB        &kp Q  &kp W   &kp E     &kp R             &kp T               &kp Y            &kp U            &kp I            &kp O           &kp P           &mt LBKT BSPC    &mt BSLH ENTER
+   &mt LSHFT ESC    &mt GRAVE TAB        &kp Q  &kp W   &kp E     &kp R             &kp T               &kp Y            &kp U            &kp I            &kp O           &kp P           &td_bspc    &mt BSLH ENTER
                     &mt LCTRL CAPS       &kp A  &kp S   &kp D     &kp F             &kp G               &kp H            &kp J            &kp K            &kp L           &kp SEMI        &td_sqt_lbkt
-                    &kp LSHFT            &kp M  &kp Z   &kp X     &kp C             &kp V               &kp B            &td_n_m_nm          &kp COMMA        &kp DOT         &kp FSLH        &kp RBKT
+                    &kp LSHFT            &kp M  &kp Z   &kp X     &kp C             &kp V               &kp B            &td_n_m_nm       &kp COMMA        &kp DOT         &kp FSLH        &kp RBKT
                                                                   &mt LCTRL SPACE   &mt LALT SPACE      &mt LWIN SPACE   &lt RSE SPACE    &lt LWR SPACE    &lt R_CTLL SPACE
                         >;
                  };
@@ -258,6 +278,16 @@
             &none   &kp F5  &kp F6   &kp F7    &kp F8   &none           &none      &none         &kp C_VOL_DN     &kp LEFT       &kp DOWN      &kp LA(RIGHT)
             &trans  &kp F1  &kp F2   &kp F3    &kp F4   &none           &none      &none         &none            &kp LA(LEFT)   &kp LG(LEFT)  &kp LG(RIGHT)
                                      &trans    &trans   &trans          &kp SPACE  &kp SPACE     &none
+                        >;
+                };
+
+                del_layer {
+                        bindings = <
+
+   &to DEF    &to DEF     &to DEF  &to DEF  &to DEF     &to DEF    &to DEF        &to DEF          &to DEF          &to DEF          &to DEF          &to DEF         &kp BSPC   &to DEF
+              &to DEF     &to DEF  &to DEF  &to DEF     &to DEF    &to DEF        &to DEF          &to DEF          &to DEF          &to DEF          &to DEF         &to DEF
+              &to DEF     &to DEF  &to DEF  &to DEF     &to DEF    &to DEF        &to DEF          &to DEF          &to DEF          &to DEF          &to DEF         &to DEF
+                                            &to DEF     &trans     &trans         &to DEF          &to DEF          &to DEF
                         >;
                 };
         };
