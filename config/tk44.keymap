@@ -274,8 +274,8 @@
                         bindings = <
 
    &trans     &kp GRAVE      &kp LS(N1)   &kp LS(N2)  &kp LS(N3)  &kp LS(N4)     &kp LS(N5)              &kp LS(N6)        &kp LS(N7)     &kp UP          &kp BSPC        &kp LBKT       &kp BSPC     &mt BSLH ENTER
-              &none          &grave_en    &at_en      &lbkt_en    &rbkt_en       &prog_caps_en           &kp KP_DIVIDE     &kp LEFT       &kp DOWN        &kp RIGHT       &kp RBKT       &lt_en          
-              &trans         &none        &none       &none       &none          &none                   &kp LS(N8)        &kp MINUS      &kp EQUAL       &kp LS(N9)      &kp LS(N0)     &gt_en
+              &none          &grave_en    &at_en      &lbkt_en    &rbkt_en       &prog_caps_en           &kp KP_DIVIDE     &kp LEFT       &kp DOWN        &kp RIGHT       &kp LS(N9)     &kp LS(N0)        
+              &trans         &none        &none       &none       &none          &none                   &kp LS(N8)        &kp MINUS      &kp EQUAL       &lt_en          &gt_en         &kp RBKT   
                                                       &trans      &trans         &trans                  &kp SPACE         &trans         &kp SPACE
                         >;
                 };
