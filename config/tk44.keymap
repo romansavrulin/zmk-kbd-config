@@ -131,8 +131,8 @@
                         ;
                 };
 
-                bspc_m: bspc_m {
-                    label = "bspc_m";
+                bspc_mkr: bspc_mkr {
+                    label = "bspc_mkr";
                     compatible = "zmk,behavior-macro";
                     #binding-cells = <0>;
                     bindings
@@ -161,10 +161,18 @@
 
                 td_p_bspc: td_p_bspc {
                     compatible = "zmk,behavior-tap-dance";
-                    label = "td_lbkt_bspc";
+                    label = "td_p_bspc";
                     #binding-cells = <0>;
                     tapping-term-ms = <250>;
-                    bindings = <&kp P>, <&bspc_m>;
+                    bindings = <&kp P>, <&bspc_mkr>;
+                };
+
+                td_o_bspc: td_o_bspc {
+                    compatible = "zmk,behavior-tap-dance";
+                    label = "td_o_bspc";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <250>;
+                    bindings = <&kp O>, <&bspc_mkr>;
                 };
 
                 td_lbkt_bspc: td_lbkt_p {
@@ -172,7 +180,7 @@
                     label = "td_lbkt_p";
                     #binding-cells = <0>;
                     tapping-term-ms = <250>;
-                    bindings = <&kp LBKT>, <&bspc_m>;
+                    bindings = <&kp LBKT>, <&bspc_mkr>;
                 };
 
                 td_n_m_nm: td_n_m_nm {
@@ -256,7 +264,7 @@
 
                         bindings = <
 
-   &mt LSHFT ESC    &mt GRAVE TAB        &kp Q  &kp W   &kp E     &kp R             &kp T               &kp Y            &kp U            &kp I            &kp O           &td_p_bspc      &td_lbkt_bspc         &mt BSLH ENTER
+   &mt LSHFT ESC    &mt GRAVE TAB        &kp Q  &kp W   &kp E     &kp R             &kp T               &kp Y            &kp U            &kp I            &td_o_bspc      &kp P           &kp LBKT      &mt BSLH ENTER
                     &mt LCTRL CAPS       &kp A  &kp S   &kp D     &kp F             &kp G               &kp H            &kp J            &kp K            &kp L           &kp SEMI        &kp SQT
                     &td_lshft_pg         &kp M  &kp Z   &kp X     &kp C             &kp V               &kp B            &td_n_m_nm       &kp COMMA        &kp DOT         &kp FSLH        &kp RBKT
                                                                   &mt LCTRL SPACE   &mt LALT SPACE      &mt LWIN SPACE   &lt NUM SPACE    &lt NAV SPACE    &lt R_CTLL SPACE
@@ -265,9 +273,9 @@
                 nav_layer {
                         bindings = <
 
-   &trans     &kp GRAVE      &kp LS(N1)   &kp LS(N2)  &kp LS(N3)  &kp LS(N4)     &kp LS(N5)              &kp LS(N6)        &kp LS(N7)     &kp UP          &kp RIGHT       &kp BSPC       &kp LS(N8)      &mt BSLH ENTER
-              &none          &grave_en    &at_en      &lbkt_en    &rbkt_en       &prog_caps_en           &kp KP_DIVIDE     &kp LEFT       &kp DOWN        &kp LBKT        &kp RBKT       &lt_en          
-              &trans         &none        &none       &none       &none          &none                   &kp BSLH          &kp MINUS      &kp EQUAL       &kp LS(N9)      &kp LS(N0)     &gt_en
+   &trans     &kp GRAVE      &kp LS(N1)   &kp LS(N2)  &kp LS(N3)  &kp LS(N4)     &kp LS(N5)              &kp LS(N6)        &kp LS(N7)     &kp UP          &kp BSPC        &kp LBKT       &kp BSPC     &mt BSLH ENTER
+              &none          &grave_en    &at_en      &lbkt_en    &rbkt_en       &prog_caps_en           &kp KP_DIVIDE     &kp LEFT       &kp DOWN        &kp RIGHT       &kp RBKT       &lt_en          
+              &trans         &none        &none       &none       &none          &none                   &kp LS(N8)        &kp MINUS      &kp EQUAL       &kp LS(N9)      &kp LS(N0)     &gt_en
                                                       &trans      &trans         &trans                  &kp SPACE         &trans         &kp SPACE
                         >;
                 };
@@ -276,7 +284,7 @@
                         bindings = <
 
    &trans   &trans  &none   &none  &none   &none   &mo ADJ      &kp KP_PLUS     &mt KP_N7 N7     &mt KP_N8 N8      &mt KP_N9 N9     &kp BSPC           &kp BSPC  &kp LG(ENTER)
-            &none   &none   &none  &none   &none   &none        &kp KP_MINUS    &mt KP_N4 N4     &mt KP_N5 N5      &mt KP_N6 N6     &kp KP_DIVIDE      &none
+            &none   &none   &none  &none   &none   &none        &kp KP_MINUS    &mt KP_N4 N4     &mt KP_N5 N5      &mt KP_N6 N6     &kp KP_DIVIDE      &none 
             &trans  &none   &none  &none   &none   &none        &prog_caps      &mt KP_N1 N1     &mt KP_N2 N2      &mt KP_N3 N3     &kp KP_DOT         &none
                                    &trans  &trans  &trans       &trans          &kp SPACE        &mt KP_N0 N0
                        >;
@@ -304,7 +312,7 @@
                 del_layer {
                         bindings = <
 
-   &to DEF    &to DEF     &to DEF  &to DEF  &to DEF     &to DEF    &to DEF        &to DEF          &to DEF          &to DEF          &to DEF          &kp BSPC        &kp BSPC   &to DEF
+   &to DEF    &to DEF     &to DEF  &to DEF  &to DEF     &to DEF    &to DEF        &to DEF          &to DEF          &to DEF          &kp BSPC         &to DEF         &to DEF   &to DEF
               &to DEF     &to DEF  &to DEF  &to DEF     &to DEF    &to DEF        &to DEF          &to DEF          &to DEF          &to DEF          &to DEF         &to DEF
               &to DEF     &to DEF  &to DEF  &to DEF     &to DEF    &to DEF        &to DEF          &to DEF          &to DEF          &to DEF          &to DEF         &to DEF
                                             &to DEF     &trans     &trans         &to DEF          &to DEF          &to DEF
