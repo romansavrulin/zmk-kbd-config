@@ -264,10 +264,10 @@
 
                         bindings = <
 
-   &mt LSHFT ESC    &mt GRAVE TAB        &kp Q  &kp W   &kp E     &kp R             &kp T               &kp Y            &kp U            &kp I            &kp O           &kp P           &kp LBKT      &mt BSLH ENTER
-                    &mt LCTRL CAPS       &kp A  &kp S   &kp D     &kp F             &kp G               &kp H            &kp J            &kp K            &kp L           &kp SEMI        &kp SQT
-                    &kp LCTRL            &kp M  &kp Z   &kp X     &kp C             &kp V               &kp B            &kp N            &kp COMMA        &kp DOT         &kp FSLH        &kp RBKT
-                                                                  &mt LWIN SPACE    &kp SPACE           &mt LALT SPACE   &lt NUM SPACE    &kp SPACE        &lt R_CTLL SPACE
+   &mt LSHFT ESC    &kp TAB        &kp Q  &kp W   &kp E     &kp R             &kp T               &kp Y            &kp U            &kp I            &kp O           &kp P           &kp LBKT      &mt BSLH ENTER
+                    &kp CAPS       &kp A  &kp S   &kp D     &kp F             &kp G               &kp H            &kp J            &kp K            &kp L           &kp SEMI        &kp SQT
+                    &kp LCTRL      &kp M  &kp Z   &kp X     &kp C             &kp V               &kp B            &kp N            &kp COMMA        &kp DOT         &kp FSLH        &kp RBKT
+                                                            &kp LWIN          &kp SPACE           &kp LALT         &lt NUM SPACE    &kp SPACE        &kp R_CTLL
                         >;
                  };
                 nav_layer {
