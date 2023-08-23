@@ -264,7 +264,7 @@
 
                         bindings = <
 
-   &mt LSHFT ESC    &kp TAB        &kp Q  &kp W   &kp E     &kp R             &kp T               &kp Y            &kp U            &kp I            &kp O           &kp P           &kp LBKT      &mt BSLH ENTER
+   &mt LSHFT ESC    &kp TAB        &kp Q  &kp W   &kp E     &kp R             &kp T               &kp Y            &kp U            &kp I            &kp O           &kp P           &kp LBKT      &kp BSLH
                     &kp CAPS       &kp A  &kp S   &kp D     &kp F             &kp G               &kp H            &kp J            &kp K            &kp L           &kp SEMI        &kp SQT
                     &kp LCTRL      &kp M  &kp Z   &kp X     &kp C             &kp V               &kp B            &kp N            &kp COMMA        &kp DOT         &kp FSLH        &kp RBKT
                                                             &kp LWIN          &kp SPACE           &kp LALT         &lt NUM SPACE    &kp SPACE        &kp RCTRL
@@ -273,7 +273,7 @@
                 nav_layer {
                         bindings = <
 
-   &trans     &kp GRAVE      &kp LS(N1)   &kp LS(N2)  &kp LS(N3)  &kp LS(N4)     &kp LS(N5)              &kp LS(N6)        &kp LS(N7)     &kp UP          &kp BSPC        &kp LBKT       &kp BSPC     &mt BSLH ENTER
+   &trans     &kp GRAVE      &kp LS(N1)   &kp LS(N2)  &kp LS(N3)  &kp LS(N4)     &kp LS(N5)              &kp LS(N6)        &kp LS(N7)     &kp UP          &kp BSPC        &kp LBKT       &kp BSPC     &kp BSLH
               &none          &grave_en    &at_en      &lbkt_en    &rbkt_en       &prog_caps_en           &kp KP_DIVIDE     &kp LEFT       &kp DOWN        &kp RIGHT       &kp LS(N9)     &kp LS(N0)        
               &trans         &none        &none       &none       &none          &none                   &kp LS(N8)        &kp MINUS      &kp EQUAL       &lt_en          &gt_en         &kp RBKT   
                                                       &trans      &trans         &trans                  &kp SPACE         &trans         &kp SPACE
