@@ -25,14 +25,14 @@
     combos {
         compatible = "zmk,combos";
 
-        kb_bootldr_r {
-            bindings = <&bootloader>;
-            key-positions = <54 6 11>;
-        };
-
         kb_bootldr_l {
             bindings = <&bootloader>;
             key-positions = <53 5 0>;
+        };
+
+        bt_clr {
+            bindings = <&bt BT_CLR>;
+            key-positions = <53 5 38>;
         };
     };
 
@@ -51,21 +51,11 @@
 
         num_layer {
             bindings = <
-        &kp TAB  &none   &none    &none    &none    &none           &none            &none      &none   &none       &none       &kp BSPC
-&trans  &kp TAB  &kp F9  &kp F10  &kp F11  &kp F12  &kp LS(N9)      &kp LS(N0)       &kp N7     &kp N8  &kp N9      &kp BSPC    &none     &kp ENTER
-        &none    &kp F5  &kp F6   &kp F7   &kp F8   &kp KP_PLUS     &kp KP_MINUS     &kp N4     &kp N5  &kp N6      &kp SEMI    &none
-        &trans   &kp F1  &kp F2   &kp F3   &kp F4   &kp KP_SLASH    &kp KP_MULTIPLY  &kp N1     &kp N2  &kp N3      &kp KP_DOT  &none
+        &kp TAB  &none   &none    &none    &none    &none           &none            &none      &none   &none       &none      &kp BSPC
+&trans  &kp TAB  &kp F9  &kp F10  &kp F11  &kp F12  &kp LS(N9)      &kp LS(N0)       &kp N7     &kp N8  &kp N9      &kp BSPC   &none     &kp ENTER
+        &none    &kp F5  &kp F6   &kp F7   &kp F8   &kp KP_PLUS     &kp KP_MINUS     &kp N4     &kp N5  &kp N6      &kp SEMI   &none
+        &trans   &kp F1  &kp F2   &kp F3   &kp F4   &kp KP_SLASH    &kp KP_MULTIPLY  &kp N1     &kp N2  &kp N3      &kp SLASH  &none
                          &trans   &trans   &trans   &trans          &trans           &kp SPACE  &kp N0  &kp KP_DOT
-            >;
-        };
-
-        adjust_layer {
-            bindings = <
-       &bootloader  &none  &none  &none   &none  &none     &none   &none  &none   &none  &none  &bootloader
-&none  &none        &none  &none  &none   &none  &none     &none   &none  &none   &none  &none  &none        &none
-       &none        &none  &none  &none   &none  &none     &none   &none  &none   &none  &none  &none
-       &bt BT_CLR   &none  &none  &none   &none  &none     &none   &none  &none   &none  &none  &sys_reset
-                           &none  &trans  &none  &trans    &trans  &none  &trans  &none
             >;
         };
     };
