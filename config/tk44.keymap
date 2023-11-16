@@ -33,6 +33,21 @@
             bindings = <&bt BT_CLR>;
             key-positions = <26 6 40>;
         };
+
+        bt0 {
+            bindings = <&bt BT_SEL 0>;
+            key-positions = <40 6 27>;
+        };
+
+        bt1 {
+            bindings = <&bt BT_SEL 1>;
+            key-positions = <40 6 28>;
+        };
+
+        bt3 {
+            bindings = <&bt BT_SEL 2>;
+            key-positions = <40 6 29>;
+        };
     };
 
     behaviors {
