@@ -24,29 +24,39 @@
     combos {
         compatible = "zmk,combos";
 
-        kb_bootldr {
+        combo_bootldr {
             bindings = <&bootloader>;
             key-positions = <40 6 1>;
         };
 
-        bt_clr {
+        combo_bt_clr {
             bindings = <&bt BT_CLR>;
             key-positions = <26 6 40>;
         };
 
-        bt0 {
+        combo_bt0 {
             bindings = <&bt BT_SEL 0>;
             key-positions = <40 6 27>;
         };
 
-        bt1 {
+        combo_bt1 {
             bindings = <&bt BT_SEL 1>;
             key-positions = <40 6 28>;
         };
 
-        bt3 {
+        combo_bt2 {
             bindings = <&bt BT_SEL 2>;
             key-positions = <40 6 29>;
+        };
+
+        combo_as {
+            bindings = <&tog 1>;
+            key-positions = <41 7 13>;
+        };
+
+        combo_bt_3 {
+            bindings = <&bt BT_SEL 3>;
+            key-positions = <40 6 30>;
         };
     };
 
@@ -68,10 +78,19 @@
 
         default_layer {
             bindings = <
+&mt LEFT_SHIFT ESCAPE  &kp TAB    &kp Q  &kp W  &kp E     &kp R      &kp T       &kp Y        &kp U      &kp I      &kp O    &kp P     &kp LBKT  &kp RET
+                       &kp CAPS   &kp A  &kp S  &kp D     &kp F      &kp G       &kp H        &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+                       &kp LCTRL  &kp M  &kp Z  &kp X     &kp C      &kp V       &kp B        &kp N      &kp COMMA  &kp DOT  &kp FSLH  &kp RBKT
+                                                &kp LGUI  &kp SPACE  &kp LALT    &lt 2 SPACE  &kp SPACE  &kp LGUI
+            >;
+        };
+
+        as_layer {
+            bindings = <
 &mt LSHFT ESC  &kp TAB    &as LS(Q) Q  &as LS(W) W  &as LS(E) E  &as LS(R) R  &as LS(T) T    &as LS(Y) Y  &as LS(U) U  &as LS(I) I          &as LS(O) O      &as LS(P) P        &as LS(LBKT) LBKT  &kp ENTER
                &kp CAPS   &as LS(A) A  &as LS(S) S  &as LS(D) D  &as LS(F) F  &as LS(G) G    &as LS(H) H  &as LS(J) J  &as LS(K) K          &as LS(L) L      &as LS(SEMI) SEMI  &as LS(SQT) SQT
                &kp LCTRL  &as LS(M) M  &as LS(Z) Z  &as LS(X) X  &as LS(C) C  &as LS(V) V    &as LS(B) B  &as LS(N) N  &as LS(COMMA) COMMA  &as LS(DOT) DOT  &as FSLH LS(FSLH)  &as LS(RBKT) RBKT
-                                                    &kp LWIN     &lt 2 SPACE  &kp LALT       &lt 1 SPACE  &lt 2 SPACE  &kp RGUI
+                                                    &kp LWIN     &lt 3 SPACE  &kp LALT       &lt 2 SPACE  &lt 3 SPACE  &kp RGUI
             >;
         };
 
