@@ -508,10 +508,10 @@
 
         nav_en_layer {
             bindings = <
-&kp LS(TAB)  &trans   &trans     &ru_as_common DOLLAR AT  &ru_as_common AMPS PERCENT  &trans           &ru_as_common TILDE GRAVE    &trans                          &ru_as_common EXCLAMATION QUESTION  &kp UP                 &kp BSPC               &trans  &trans  &trans
-             &kp TAB  &kp LCTRL  &kp LSHFT                &kp LALT                    &kp LGUI         &ru_as_common EQUAL PLUS     &ru_as_common UNDERSCORE MINUS  &kp LEFT                            &kp DOWN               &kp RIGHT              &trans  &trans
-             &trans   &trans     &trans                   &trans                      &ru_as_hash 0 0  &ru_as_common PIPE SLASH     &ru_as_common BSLH ASTERISK     &ru_as_common DOT RET               &ru_as_common LT LPAR  &ru_as_common GT RPAR  &trans  &trans
-                                                          &trans                      &trans           &trans                       &none                           &none                               &none
+&kp LS(TAB)  &trans   &trans     &ru_as_common DOLLAR AT  &ru_as_common AMPS PERCENT  &trans                    &ru_as_common TILDE GRAVE    &trans                          &ru_as_common EXCLAMATION QUESTION  &kp UP                 &kp BSPC               &trans  &trans  &trans
+             &kp TAB  &kp LCTRL  &kp LSHFT                &kp LALT                    &kp LGUI                  &ru_as_common EQUAL PLUS     &ru_as_common UNDERSCORE MINUS  &kp LEFT                            &kp DOWN               &kp RIGHT              &trans  &trans
+             &trans   &trans     &trans                   &trans                      &ru_as_common CARET HASH  &ru_as_common PIPE SLASH     &ru_as_common BSLH ASTERISK     &ru_as_common DOT RET               &ru_as_common LT LPAR  &ru_as_common GT RPAR  &trans  &trans
+                                                          &trans                      &trans                    &trans                       &none                           &none                               &none
             >;
         };
 
