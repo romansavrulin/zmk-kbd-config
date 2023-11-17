@@ -61,9 +61,9 @@
     };
 
     behaviors {
-        as: as {
+        ru_as_common: ru_as_common {
             compatible = "zmk,behavior-hold-tap";
-            label = "AS";
+            label = "RU_AS_COMMON";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -97,7 +97,29 @@
         ru_as_rbkt: ru_as_rbkt {
             compatible = "zmk,behavior-hold-tap";
             label = "RU_AS_RBKT";
-            bindings = <&ru_lbkt>, <&ru_ls_rbkt>;
+            bindings = <&ru_ls_lbkt>, <&ru_rbkt>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <140>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+        };
+
+        ru_as_lpar: ru_as_lpar {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RU_AS_LPAR";
+            bindings = <&mc_ru_lt>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <140>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+        };
+
+        ru_as_rpar: ru_as_rpar {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RU_AS_RPAR";
+            bindings = <&mc_ru_gt>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <140>;
@@ -107,7 +129,7 @@
     };
 
     macros {
-        ru_lbkt: ru_lbkt {
+        mc_ru_lbkt: mc_ru_lbkt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -120,10 +142,10 @@
                 <&kp CLCK>,
                 <&macro_wait_time 20>;
 
-            label = "RU_LBKT";
+            label = "MC_RU_LBKT";
         };
 
-        ru_ls_lbkt: ru_ls_lbkt {
+        mc_ru_lbrc: mc_ru_lbrc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -131,15 +153,15 @@
                 <&kp CAPS>,
                 <&macro_wait_time 20>,
                 <&macro_tap>,
-                <&kp LS(LBKT)>,
+                <&kp LBRC>,
                 <&macro_tap_time 80>,
                 <&kp CLCK>,
                 <&macro_wait_time 20>;
 
-            label = "RU_LS_LBKT";
+            label = "MC_RU_LBRC";
         };
 
-        ru_single_quote: ru_single_quote {
+        mc_ru_si_quote: mc_ru_si_quote {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -152,10 +174,10 @@
                 <&kp CLCK>,
                 <&macro_wait_time 20>;
 
-            label = "RU_SINGLE_QUOTE";
+            label = "MC_RU_SI_QUOTE";
         };
 
-        ru_rbkt: ru_rbkt {
+        mc_ru_rbkt: mc_ru_rbkt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -168,10 +190,10 @@
                 <&kp CLCK>,
                 <&macro_wait_time 20>;
 
-            label = "RU_RBKT";
+            label = "MC_RU_RBKT";
         };
 
-        ru_ls_rbkt: ru_ls_rbkt {
+        mc_ru_rbrc: mc_ru_rbrc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -179,12 +201,44 @@
                 <&kp CAPS>,
                 <&macro_wait_time 20>,
                 <&macro_tap>,
-                <&kp LS(RBKT)>,
+                <&kp RIGHT_BRACE>,
                 <&macro_tap_time 80>,
                 <&kp CLCK>,
                 <&macro_wait_time 20>;
 
-            label = "RU_LS_RBKT";
+            label = "MC_RU_RBRC";
+        };
+
+        mc_ru_lt: mc_ru_lt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap_time 80>,
+                <&kp CAPS>,
+                <&macro_wait_time 20>,
+                <&macro_tap>,
+                <&kp LT>,
+                <&macro_tap_time 80>,
+                <&kp CLCK>,
+                <&macro_wait_time 20>;
+
+            label = "MC_RU_LT";
+        };
+
+        mc_ru_gt: mc_ru_gt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap_time 80>,
+                <&kp CAPS>,
+                <&macro_wait_time 20>,
+                <&macro_tap>,
+                <&kp GT>,
+                <&macro_tap_time 80>,
+                <&kp CLCK>,
+                <&macro_wait_time 20>;
+
+            label = "MC_RU_GT";
         };
     };
 
@@ -202,19 +256,19 @@
 
         as_ru_layer {
             bindings = <
-&mt LSHFT ESC  &kp TAB    &as LS(Q) Q  &as LS(W) W  &as LS(E) E  &as LS(R) R  &as LS(T) T    &as LS(Y) Y  &as LS(U) U  &as LS(I) I          &as LS(O) O      &as LS(P) P        &as LS(LBKT) LBKT  &kp ENTER
-               &kp CAPS   &as LS(A) A  &as LS(S) S  &as LS(D) D  &as LS(F) F  &as LS(G) G    &as LS(H) H  &as LS(J) J  &as LS(K) K          &as LS(L) L      &as LS(SEMI) SEMI  &as LS(SQT) SQT
-               &kp LCTRL  &as LS(M) M  &as LS(Z) Z  &as LS(X) X  &as LS(C) C  &as LS(V) V    &as LS(B) B  &as LS(N) N  &as LS(COMMA) COMMA  &as LS(DOT) DOT  &as FSLH LS(FSLH)  &as LS(RBKT) RBKT
-                                                    &kp LWIN     &lt 2 SPACE  &kp LALT       &lt 3 SPACE  &lt 2 SPACE  &kp RGUI
+&mt LSHFT ESC  &kp TAB    &ru_as_common LS(Q) Q  &ru_as_common LS(W) W  &ru_as_common LS(E) E  &ru_as_common LS(R) R  &ru_as_common LS(T) T    &ru_as_common LS(Y) Y  &ru_as_common LS(U) U  &ru_as_common LS(I) I          &ru_as_common LS(O) O      &ru_as_common LS(P) P        &ru_as_common LS(LBKT) LBKT  &kp ENTER
+               &kp CAPS   &ru_as_common LS(A) A  &ru_as_common LS(S) S  &ru_as_common LS(D) D  &ru_as_common LS(F) F  &ru_as_common LS(G) G    &ru_as_common LS(H) H  &ru_as_common LS(J) J  &ru_as_common LS(K) K          &ru_as_common LS(L) L      &ru_as_common LS(SEMI) SEMI  &ru_as_common LS(SQT) SQT
+               &kp LCTRL  &ru_as_common LS(M) M  &ru_as_common LS(Z) Z  &ru_as_common LS(X) X  &ru_as_common LS(C) C  &ru_as_common LS(V) V    &ru_as_common LS(B) B  &ru_as_common LS(N) N  &ru_as_common LS(COMMA) COMMA  &ru_as_common LS(DOT) DOT  &ru_as_common FSLH LS(FSLH)  &ru_as_common LS(RBKT) RBKT
+                                                                        &kp LWIN               &lt 2 SPACE            &kp LALT                 &lt 3 SPACE            &lt 2 SPACE            &kp RGUI
             >;
         };
 
         nav_ru_layer {
             bindings = <
-&kp LS(TAB)  &none    &none      &none      &none     &none              &as GRAVE TILDE        &none                &as LS(N1) LS(N7)  &kp UP      &kp BSPC    &none              &ru_as_lbkt 0 0        &none
-             &kp TAB  &kp LCTRL  &kp LSHFT  &kp LALT  &kp LGUI           &as EQUAL LS(EQUAL)    &as LS(MINUS) MINUS  &kp LEFT           &kp DOWN    &kp RIGHT   &as LS(N6) LS(N4)  &ru_as_quote 0 LS(N2)
-             &none    &none      &none      &none     &as LS(N6) LS(N3)  &as PIPE FSLH          &as BSLH LS(N8)      &as FSLH RET       &kp LS(N9)  &kp LS(N0)  &trans             &ru_as_rbkt 0 0
-                                            &none     &none              &none                  &none                &none              &none
+&kp LS(TAB)  &none    &none      &none      &none     &none                        &ru_as_common GRAVE TILDE        &none                          &ru_as_common LS(N1) LS(N7)  &kp UP              &kp BSPC            &none                        &ru_as_lbkt 0 0        &none
+             &kp TAB  &kp LCTRL  &kp LSHFT  &kp LALT  &kp LGUI                     &ru_as_common EQUAL LS(EQUAL)    &ru_as_common LS(MINUS) MINUS  &kp LEFT                     &kp DOWN            &kp RIGHT           &ru_as_common LS(N6) LS(N4)  &ru_as_quote 0 LS(N2)
+             &none    &none      &none      &none     &ru_as_common LS(N6) LS(N3)  &ru_as_common PIPE FSLH          &ru_as_common BSLH LS(N8)      &ru_as_common FSLH RET       &ru_as_lpar 0 LPAR  &ru_as_rpar 0 RPAR  &trans                       &ru_as_rbkt 0 0
+                                            &none     &none                        &none                            &none                          &none                        &none
             >;
         };
 
