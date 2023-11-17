@@ -75,7 +75,7 @@
         ru_as_lbkt: ru_as_lbkt {
             compatible = "zmk,behavior-hold-tap";
             label = "RU_AS_LBKT";
-            bindings = <&ru_ls_lbkt>, <&ru_lbkt>;
+            bindings = <&mc_ru_lbrc>, <&mc_ru_lbkt>;
 
             #binding-cells = <2>;
             tapping-term-ms = <140>;
@@ -86,7 +86,7 @@
         ru_as_quote: ru_as_quote {
             compatible = "zmk,behavior-hold-tap";
             label = "RU_AS_QUOTE";
-            bindings = <&ru_single_quote>, <&kp>;
+            bindings = <&mc_ru_si_quote>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <140>;
@@ -97,7 +97,7 @@
         ru_as_rbkt: ru_as_rbkt {
             compatible = "zmk,behavior-hold-tap";
             label = "RU_AS_RBKT";
-            bindings = <&ru_ls_lbkt>, <&ru_rbkt>;
+            bindings = <&mc_ru_rbrc>, <&mc_ru_rbkt>;
 
             #binding-cells = <2>;
             tapping-term-ms = <140>;
