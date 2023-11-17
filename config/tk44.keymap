@@ -467,10 +467,10 @@
 
         nav_ru_layer {
             bindings = <
-&kp LS(TAB)  &none    &none      &ru_as_at 0 0  &ru_as_perc 0 PERCENT  &none            &ru_as_grave 0 0                 &none                          &ru_as_common LS(N1) LS(N7)  &kp UP              &kp BSPC            &none                        &ru_as_lbkt 0 0        &none
+&kp LS(TAB)  &trans   &trans     &ru_as_at 0 0  &ru_as_perc 0 PERCENT  &trans           &ru_as_grave 0 0                 &trans                         &ru_as_common LS(N1) LS(N7)  &kp UP              &kp BSPC            &trans                       &ru_as_lbkt 0 0        &trans
              &kp TAB  &kp LCTRL  &kp LSHFT      &kp LALT               &kp LGUI         &ru_as_common EQUAL LS(EQUAL)    &ru_as_common LS(MINUS) MINUS  &kp LEFT                     &kp DOWN            &kp RIGHT           &ru_as_common LS(N4) LS(N6)  &ru_as_quote 0 LS(N2)
-             &none    &none      &none          &none                  &ru_as_hash 0 0  &ru_as_slash 0 LS(BSLH)          &ru_as_common BSLH LS(N8)      &ru_as_common FSLH RET       &ru_as_lpar 0 LPAR  &ru_as_rpar 0 RPAR  &trans                       &ru_as_rbkt 0 0
-                                                &none                  &none            &none                            &none                          &none                        &none
+             &trans   &trans     &trans         &trans                 &ru_as_hash 0 0  &ru_as_slash 0 LS(BSLH)          &ru_as_common BSLH LS(N8)      &ru_as_common FSLH RET       &ru_as_lpar 0 LPAR  &ru_as_rpar 0 RPAR  &trans                       &ru_as_rbkt 0 0
+                                                &trans                 &trans           &trans                           &trans                         &trans                       &trans
             >;
         };
 
@@ -494,10 +494,10 @@
 
         nav_en_layer {
             bindings = <
-&kp LS(TAB)  &none    &none      &ru_as_common DOLLAR AT  &ru_as_common AMPS PERCENT  &none            &ru_as_common TILDE GRAVE    &none                           &ru_as_common EXCLAMATION QUESTION  &kp UP                 &kp BSPC               &none                     &ru_as_common C_AL_FILE_BROWSER LBKT  &none
-             &kp TAB  &kp LCTRL  &kp LSHFT                &kp LALT                    &kp LGUI         &ru_as_common EQUAL PLUS     &ru_as_common UNDERSCORE MINUS  &kp LEFT                            &kp DOWN               &kp RIGHT              &ru_as_common SEMI COLON  &ru_as_common APOS SINGLE_QUOTE
-             &none    &none      &none                    &none                       &ru_as_hash 0 0  &ru_as_common PIPE SLASH     &ru_as_common BSLH ASTERISK     &ru_as_common FSLH RET              &ru_as_common LT LPAR  &ru_as_common GT RPAR  &trans                    &ru_as_common RBRC RBKT
-                                                          &none                       &none            &none                        &none                           &none                               &none
+&kp LS(TAB)  &trans   &trans     &ru_as_common DOLLAR AT  &ru_as_common AMPS PERCENT  &trans           &ru_as_common TILDE GRAVE    &trans                          &ru_as_common EXCLAMATION QUESTION  &kp UP                 &kp BSPC               &trans  &trans  &trans
+             &kp TAB  &kp LCTRL  &kp LSHFT                &kp LALT                    &kp LGUI         &ru_as_common EQUAL PLUS     &ru_as_common UNDERSCORE MINUS  &kp LEFT                            &kp DOWN               &kp RIGHT              &trans  &trans
+             &trans   &trans     &trans                   &trans                      &ru_as_hash 0 0  &ru_as_common PIPE SLASH     &ru_as_common BSLH ASTERISK     &ru_as_common DOT RET               &ru_as_common LT LPAR  &ru_as_common GT RPAR  &trans  &trans
+                                                          &trans                      &trans           &trans                       &none                           &none                               &none
             >;
         };
 
