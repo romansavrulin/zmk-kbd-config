@@ -463,5 +463,32 @@
                                   &trans   &trans   &trans           &trans           &kp KP_DOT  &kp N0
             >;
         };
+
+        as_en_layer {
+            bindings = <
+&mt LSHFT ESC  &kp TAB    &ru_as_common LS(Q) Q  &ru_as_common LS(W) W  &ru_as_common LS(E) E  &ru_as_common LS(R) R  &ru_as_common LS(T) T    &ru_as_common LS(Y) Y  &ru_as_common LS(U) U  &ru_as_common LS(I) I          &ru_as_common LS(O) O      &ru_as_common LS(P) P        &ru_as_common LS(LBKT) LBKT  &kp ENTER
+               &kp CAPS   &ru_as_common LS(A) A  &ru_as_common LS(S) S  &ru_as_common LS(D) D  &ru_as_common LS(F) F  &ru_as_common LS(G) G    &ru_as_common LS(H) H  &ru_as_common LS(J) J  &ru_as_common LS(K) K          &ru_as_common LS(L) L      &ru_as_common LS(SEMI) SEMI  &ru_as_common LS(SQT) SQT
+               &kp LCTRL  &ru_as_common LS(M) M  &ru_as_common LS(Z) Z  &ru_as_common LS(X) X  &ru_as_common LS(C) C  &ru_as_common LS(V) V    &ru_as_common LS(B) B  &ru_as_common LS(N) N  &ru_as_common LS(COMMA) COMMA  &ru_as_common LS(DOT) DOT  &ru_as_common FSLH LS(FSLH)  &ru_as_common LS(RBKT) RBKT
+                                                                        &kp LWIN               &lt 2 SPACE            &kp LALT                 &lt 3 SPACE            &lt 2 SPACE            &kp RGUI
+            >;
+        };
+
+        nav_en_layer {
+            bindings = <
+&kp LS(TAB)  &none    &none      &ru_as_at 0 0  &ru_as_perc 0 PERCENT  &none            &ru_as_grave 0 0                 &none                          &ru_as_common LS(N1) LS(N7)  &kp UP              &kp BSPC            &none                        &ru_as_lbkt 0 0        &none
+             &kp TAB  &kp LCTRL  &kp LSHFT      &kp LALT               &kp LGUI         &ru_as_common EQUAL LS(EQUAL)    &ru_as_common LS(MINUS) MINUS  &kp LEFT                     &kp DOWN            &kp RIGHT           &ru_as_common LS(N4) LS(N6)  &ru_as_quote 0 LS(N2)
+             &none    &none      &none          &none                  &ru_as_hash 0 0  &ru_as_slash 0 LS(BSLH)          &ru_as_common BSLH LS(N8)      &ru_as_common FSLH RET       &ru_as_lpar 0 LPAR  &ru_as_rpar 0 RPAR  &trans                       &ru_as_rbkt 0 0
+                                                &none                  &none            &none                            &none                          &none                        &none
+            >;
+        };
+
+        num_en_layer {
+            bindings = <
+&trans  &kp TAB  &kp F9  &kp F10  &kp F11  &kp F12  &kp LS(N9)       &kp LS(N0)       &kp N7      &kp N8  &kp N9  &kp BSPC   &kp LS(N9)        &kp ENTER
+        &none    &kp F5  &kp F6   &kp F7   &kp F8   &kp EQUAL        &kp MINUS        &kp N4      &kp N5  &kp N6  &kp SEMI   &kp SINGLE_QUOTE
+        &trans   &kp F1  &kp F2   &kp F3   &kp F4   &kp KP_DIVIDE    &kp KP_ASTERISK  &kp N1      &kp N2  &kp N3  &kp SLASH  &kp LS(N0)
+                                  &trans   &trans   &trans           &trans           &kp KP_DOT  &kp N0
+            >;
+        };
     };
 };
