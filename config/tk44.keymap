@@ -49,9 +49,10 @@
             key-positions = <40 6 29>;
         };
 
-        combo_as_ru {
+        combo_bare_ru_tog {
             bindings = <&tog 1>;
             key-positions = <41 7 13>;
+            layers = <0 1>;
         };
 
         combo_bt_3 {
@@ -59,10 +60,16 @@
             key-positions = <40 6 30>;
         };
 
-        combo_ru_en_sw {
+        combo_ru_en_tog {
             bindings = <&tog 4>;
             key-positions = <41 7 12>;
             layers = <1 4>;
+        };
+
+        combo_en_to_bare {
+            bindings = <&mc_to_bare_en>;
+            key-positions = <41 7 13>;
+            layers = <4>;
         };
     };
 
@@ -441,6 +448,13 @@
                 <&tog 4>;
 
             label = "MC_RU_EN_SW";
+        };
+
+        mc_to_bare_en: mc_to_bare_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 4 &tog 1>;
+            label = "MC_TO_BARE_EN";
         };
     };
 
