@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #define DEF    0
 #define NUM    1
@@ -70,6 +71,11 @@
             bindings = <&mc_to_bare_en>;
             key-positions = <41 7 13>;
             layers = <4>;
+        };
+
+        output_toggle {
+            bindings = <&out OUT_TOG>;
+            key-positions = <41 8 13>;
         };
     };
 
