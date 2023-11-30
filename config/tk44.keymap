@@ -205,6 +205,17 @@
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
         };
+
+        lt_spc: lt_spc {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_SPC";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <39 42>;
+        };
     };
 
     macros {
@@ -486,7 +497,7 @@
 &mt LSHFT ESC  &kp TAB       &ru_as_common LS(Q) Q  &ru_as_common LS(W) W  &ru_as_common LS(E) E  &ru_as_common LS(R) R  &ru_as_common LS(T) T    &ru_as_common LS(Y) Y  &ru_as_common LS(U) U  &ru_as_common LS(I) I          &ru_as_common LS(O) O      &ru_as_common LS(P) P        &ru_as_common LS(LBKT) LBKT  &kp ENTER
                &mc_ru_en_sw  &ru_as_common LS(A) A  &ru_as_common LS(S) S  &ru_as_common LS(D) D  &ru_as_common LS(F) F  &ru_as_common LS(G) G    &ru_as_common LS(H) H  &ru_as_common LS(J) J  &ru_as_common LS(K) K          &ru_as_common LS(L) L      &ru_as_common LS(SEMI) SEMI  &ru_as_common LS(SQT) SQT
                &kp LCTRL     &ru_as_common LS(M) M  &ru_as_common LS(Z) Z  &ru_as_common LS(X) X  &ru_as_common LS(C) C  &ru_as_common LS(V) V    &ru_as_common LS(B) B  &ru_as_common LS(N) N  &ru_as_common LS(COMMA) COMMA  &ru_as_common LS(DOT) DOT  &ru_as_common FSLH LS(FSLH)  &ru_as_common LS(RBKT) RBKT
-                                                                           &kp LWIN               &lt 2 SPACE            &kp LALT                 &lt 3 SPACE            &lt 2 SPACE            &kp RGUI
+                                                                           &kp LWIN               &lt_spc 2 SPACE        &kp LALT                 &lt 3 SPACE            &lt_spc 2 SPACE        &kp RGUI
             >;
         };
 
@@ -513,7 +524,7 @@
 &mt LSHFT ESC  &kp TAB       &ru_as_common LS(Q) Q  &ru_as_common LS(W) W  &ru_as_common LS(E) E  &ru_as_common LS(R) R  &ru_as_common LS(T) T    &ru_as_common LS(Y) Y  &ru_as_common LS(U) U  &ru_as_common LS(I) I          &ru_as_common LS(O) O      &ru_as_common LS(P) P       &ru_as_common LS(LBKT) LBKT             &kp ENTER
                &mc_ru_en_sw  &ru_as_common LS(A) A  &ru_as_common LS(S) S  &ru_as_common LS(D) D  &ru_as_common LS(F) F  &ru_as_common LS(G) G    &ru_as_common LS(H) H  &ru_as_common LS(J) J  &ru_as_common LS(K) K          &ru_as_common LS(L) L      &ru_as_common SEMI COLON    &ru_as_common APOSTROPHE DOUBLE_QUOTES
                &kp LCTRL     &ru_as_common LS(M) M  &ru_as_common LS(Z) Z  &ru_as_common LS(X) X  &ru_as_common LS(C) C  &ru_as_common LS(V) V    &ru_as_common LS(B) B  &ru_as_common LS(N) N  &ru_as_common LS(COMMA) COMMA  &ru_as_common LS(DOT) DOT  &ru_as_common PERIOD COMMA  &ru_as_common LS(RBKT) RBKT
-                                                                           &kp LWIN               &lt 5 SPACE            &kp LALT                 &lt 6 SPACE            &lt 5 SPACE            &kp RGUI
+                                                                           &kp LWIN               &lt_spc 5 SPACE        &kp LALT                 &lt 6 SPACE            &lt_spc 5 SPACE        &kp RGUI
             >;
         };
 
