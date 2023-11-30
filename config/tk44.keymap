@@ -14,11 +14,11 @@
 #define ADJ    2
 
 &lt {
-    quick_tap_ms = <160>;
+    quick-tap-ms = <160>;
 };
 
 &mt {
-    quick_tap_ms = <160>;
+    quick-tap-ms = <160>;
 };
 
 &kscan0 {
