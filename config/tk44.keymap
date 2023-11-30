@@ -91,7 +91,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <140>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
         };
@@ -102,7 +102,7 @@
             bindings = <&mc_ru_lbrc>, <&mc_ru_lbkt>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <140>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
         };
@@ -113,7 +113,7 @@
             bindings = <&mc_ru_si_quote>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <140>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
         };
@@ -124,7 +124,7 @@
             bindings = <&mc_ru_rbrc>, <&mc_ru_rbkt>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <140>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
         };
@@ -135,7 +135,7 @@
             bindings = <&mc_ru_lt>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <140>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
         };
@@ -146,7 +146,7 @@
             bindings = <&mc_ru_gt>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <140>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
         };
@@ -157,7 +157,7 @@
             bindings = <&mc_ru_tilde>, <&mc_ru_grave>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <140>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
         };
@@ -168,7 +168,7 @@
             bindings = <&mc_ru_dollar>, <&mc_ru_at>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <140>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
         };
@@ -179,7 +179,7 @@
             bindings = <&mc_ru_caret>, <&mc_ru_hash>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <140>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
         };
@@ -190,7 +190,7 @@
             bindings = <&mc_ru_pipe>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <140>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
         };
@@ -201,7 +201,7 @@
             bindings = <&mc_ru_amp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <140>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
         };
