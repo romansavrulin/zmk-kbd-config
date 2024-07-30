@@ -283,6 +283,17 @@
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
         };
+
+        as_single: as_single {
+            compatible = "zmk,behavior-hold-tap";
+            label = "AS_SINGLE";
+            bindings = <&mc_single_tap>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+        };
     };
 
     macros {
@@ -641,6 +652,18 @@
 
             label = "MC_SINGLE_EQL";
         };
+
+        mc_single_tap: mc_single_tap {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_wait_time 20>,
+                <&macro_release>;
+
+            label = "MC_SINGLE_TAP";
+        };
     };
 
     keymap {
@@ -666,10 +689,10 @@
 
         nav_ru_layer {
             bindings = <
-&trans  &kp ESC      &trans     &ru_as_dollar_at 0 0  &ru_as_amp 0 PERCENT  &trans                 &ru_as_tilde_grave 0 0    &trans                &ru_as_excl 0 LS(N7)  &kp UP            &kp BSPC          &trans                 &ru_as_lbrc_lbkt 0 0     &trans
-        &kp TAB      &kp LCTRL  &kp LSHFT             &kp LALT              &kp LGUI               &ru_as_eq 0 LS(EQUAL)     &ru_as_under 0 MINUS  &kp LEFT              &kp DOWN          &kp RIGHT         &ru_as_semi 0 LS(N6)   &ru_as_siquote 0 LS(N2)
-        &kp LS(TAB)  &trans     &trans                &trans                &ru_as_caret_hash 0 0  &ru_as_pipe 0 LS(BSLH)    &ru_as_bslh 0 LS(N8)  &ru_as_dot 0 RET      &ru_as_lt 0 LPAR  &ru_as_gt 0 RPAR  &ru_as_dot 0 QUESTION  &ru_as_rbrc_rbkt 0 0
-                                                      &trans                &mc_single_spc         &trans                    &none                 &mc_single_spc        &none
+&trans  &kp ESC      &trans     &ru_as_dollar_at 0 0  &ru_as_amp 0 PERCENT  &trans                 &ru_as_tilde_grave 0 0    &trans                  &ru_as_excl 0 LS(N7)  &kp UP            &kp BSPC          &trans                     &ru_as_lbrc_lbkt 0 0     &trans
+        &kp TAB      &kp LCTRL  &kp LSHFT             &kp LALT              &kp LGUI               &ru_as_eq 0 LS(EQUAL)     &ru_as_under 0 MINUS    &kp LEFT              &kp DOWN          &kp RIGHT         &as_single 0 LS(N6)        &ru_as_siquote 0 LS(N2)
+        &kp LS(TAB)  &trans     &trans                &trans                &ru_as_caret_hash 0 0  &ru_as_pipe 0 LS(BSLH)    &as_single PIPE LS(N8)  &as_single RET SLASH  &ru_as_lt 0 LPAR  &ru_as_gt 0 RPAR  &as_single SLASH QUESTION  &ru_as_rbrc_rbkt 0 0
+                                                      &trans                &mc_single_spc         &trans                    &none                   &mc_single_spc        &none
             >;
         };
 
