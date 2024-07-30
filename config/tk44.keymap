@@ -585,10 +585,10 @@
 
         nav_en_layer {
             bindings = <
-&trans  &kp ESCAPE   &trans     &as DOLLAR AT  &as AMPS PERCENT  &trans          &as TILDE GRAVE    &trans                &as EXCLAMATION QUESTION  &kp UP       &kp BSPC     &trans  &trans  &trans
-        &kp TAB      &kp LCTRL  &kp LSHFT      &kp LALT          &kp LGUI        &as EQUAL PLUS     &as UNDERSCORE MINUS  &kp LEFT                  &kp DOWN     &kp RIGHT    &trans  &trans
-        &kp LS(TAB)  &trans     &trans         &trans            &as CARET HASH  &as PIPE SLASH     &as BSLH ASTERISK     &as DOT RET               &as LT LPAR  &as GT RPAR  &trans  &trans
-                                               &trans            &mc_single_spc  &trans             &none                 &mc_single_spc            &none
+&trans  &kp ESCAPE   &trans     &as_single DOLLAR AT  &as_single AMPS PERCENT  &trans                 &as_single TILDE GRAVE    &trans                       &as_single EXCLAMATION QUESTION  &kp UP              &kp BSPC            &trans  &trans  &trans
+        &kp TAB      &kp LCTRL  &kp LSHFT             &kp LALT                 &kp LGUI               &as_single EQUAL PLUS     &as_single UNDERSCORE MINUS  &kp LEFT                         &kp DOWN            &kp RIGHT           &trans  &trans
+        &kp LS(TAB)  &trans     &trans                &trans                   &as_single CARET HASH  &as_single PIPE SLASH     &as_single BSLH ASTERISK     &as_single DOT RET               &as_single LT LPAR  &as_single GT RPAR  &trans  &trans
+                                                      &trans                   &mc_single_spc         &trans                    &none                        &mc_single_spc                   &none
             >;
         };
 
