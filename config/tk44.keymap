@@ -174,14 +174,6 @@
             label = "MC_TO_BARE_EN";
         };
 
-        mc_single_spc: mc_single_spc {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp SPACE>;
-
-            label = "MC_SINGLE_SPC";
-        };
-
         mc_single_tap: mc_single_tap {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -233,7 +225,7 @@
 &trans  &kp ESC      &trans     &sw_as_sw_single DOLLAR AT  &as_sw_single AMPS PERCENT  &trans                       &sw_as_sw_single TILDE GRAVE    &trans                  &as_single EXCL LS(N7)  &kp UP                 &kp BSPC               &trans                     &sw_as_sw_single LBRC LBKT         &trans
         &kp TAB      &kp LCTRL  &kp LSHFT                   &kp LALT                    &kp LGUI                     &as_single EQUAL LS(EQUAL)      &as_single UNDER MINUS  &kp LEFT                &kp DOWN               &kp RIGHT              &as_single LS(N4) LS(N6)   &as_sw_single SINGLE_QUOTE LS(N2)
         &kp LS(TAB)  &trans     &trans                      &trans                      &sw_as_sw_single CARET HASH  &as_sw_single PIPE LS(BSLH)     &as_single BSLH LS(N8)  &as_single SLASH RET    &as_sw_single LT LPAR  &as_sw_single GT RPAR  &as_single SLASH QUESTION  &sw_as_sw_single RBRC RBKT
-                                                            &trans                      &mc_single_tap ESCAPE        &trans                          &none                   &mc_single_tap SPACE    &none
+                                                            &trans                      &mc_single_tap SPACE         &trans                          &none                   &mc_single_tap SPACE    &none
             >;
         };
 
@@ -260,7 +252,7 @@
 &trans  &kp ESCAPE   &trans     &as_single DOLLAR AT  &as_single AMPS PERCENT  &trans                 &as_single TILDE GRAVE    &trans                       &as_single EXCLAMATION QUESTION  &kp UP              &kp BSPC            &trans  &trans  &trans
         &kp TAB      &kp LCTRL  &kp LSHFT             &kp LALT                 &kp LGUI               &as_single EQUAL PLUS     &as_single UNDERSCORE MINUS  &kp LEFT                         &kp DOWN            &kp RIGHT           &trans  &trans
         &kp LS(TAB)  &trans     &trans                &trans                   &as_single CARET HASH  &as_single PIPE SLASH     &as_single BSLH ASTERISK     &as_single DOT RET               &as_single LT LPAR  &as_single GT RPAR  &trans  &trans
-                                                      &trans                   &mc_single_tap SPACE   &trans                    &none                        &mc_sw_tap_sw SPACE              &none
+                                                      &trans                   &mc_single_tap SPACE   &trans                    &none                        &mc_single_tap SPACE             &none
             >;
         };
 
