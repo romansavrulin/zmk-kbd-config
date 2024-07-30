@@ -231,17 +231,17 @@
 
         num_ru_layer {
             bindings = <
-&trans  &kp TAB  &kp F9  &kp F10  &kp F11  &kp F12  &mc_single_tap LS(N9)       &mc_single_tap LS(N0)       &kp N7  &kp N8                 &kp N9  &kp BSPC  &trans  &kp ENTER
-        &none    &kp F5  &kp F6   &kp F7   &kp F8   &mc_single_tap PLUS         &mc_single_tap MINUS        &kp N4  &kp N5                 &kp N6  &trans    &trans
-        &trans   &kp F1  &kp F2   &kp F3   &kp F4   &mc_single_tap KP_DIVIDE    &mc_single_tap KP_ASTERISK  &kp N1  &kp N2                 &kp N3  &trans    &trans
+&trans  &kp TAB  &kp F9  &kp F10  &kp F11  &kp F12  &mc_single_tap LS(N9)       &mc_single_tap LS(N0)       &kp N7  &kp N8                 &kp N9  &kp BSPC                   &sw_as_sw_single LBRC LBKT         &kp ENTER
+        &none    &kp F5  &kp F6   &kp F7   &kp F8   &mc_single_tap PLUS         &mc_single_tap MINUS        &kp N4  &kp N5                 &kp N6  &as_single LS(N4) LS(N6)   &as_sw_single SINGLE_QUOTE LS(N2)
+        &trans   &kp F1  &kp F2   &kp F3   &kp F4   &mc_single_tap KP_DIVIDE    &mc_single_tap KP_ASTERISK  &kp N1  &kp N2                 &kp N3  &as_single SLASH QUESTION  &sw_as_sw_single RBRC RBKT
                                   &trans   &trans   &mc_single_tap EQUAL        &trans                      &kp N0  &mc_single_tap KP_DOT
             >;
         };
 
         as_en_layer {
             bindings = <
-&mt LSHFT ESC  &kp TAB       &as LS(Q) Q  &as LS(W) W  &as LS(E) E  &as LS(R) R      &as LS(T) T    &as LS(Y) Y  &as LS(U) U      &as LS(I) I          &as LS(O) O      &as LS(P) P       &as_single LS(LBKT) LBKT             &kp ENTER
-               &mc_ru_en_sw  &as LS(A) A  &as LS(S) S  &as LS(D) D  &as LS(F) F      &as LS(G) G    &as LS(H) H  &as LS(J) J      &as LS(K) K          &as LS(L) L      &as SEMI COLON    &as_single APOSTROPHE DOUBLE_QUOTES
+&mt LSHFT ESC  &kp TAB       &as LS(Q) Q  &as LS(W) W  &as LS(E) E  &as LS(R) R      &as LS(T) T    &as LS(Y) Y  &as LS(U) U      &as LS(I) I          &as LS(O) O      &as LS(P) P       &as_single LS(LBKT) LBKT                 &kp ENTER
+               &mc_ru_en_sw  &as LS(A) A  &as LS(S) S  &as LS(D) D  &as LS(F) F      &as LS(G) G    &as LS(H) H  &as LS(J) J      &as LS(K) K          &as LS(L) L      &as SEMI COLON    &as_single APOSTROPHE LS(DOUBLE_QUOTES)
                &kp LCTRL     &as LS(M) M  &as LS(Z) Z  &as LS(X) X  &as LS(C) C      &as LS(V) V    &as LS(B) B  &as LS(N) N      &as LS(COMMA) COMMA  &as LS(DOT) DOT  &as PERIOD COMMA  &as_single LS(RBKT) RBKT
                                                        &kp LWIN     &lt_spc 5 SPACE  &kp LALT       &lt 6 SPACE  &lt_spc 5 SPACE  &kp RGUI
             >;
