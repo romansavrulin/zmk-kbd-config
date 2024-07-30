@@ -97,9 +97,9 @@
             flavor = "tap-preferred";
         };
 
-        ru_as_lbkt: ru_as_lbkt {
+        ru_as_lbrc_lbkt: ru_as_lbrc_lbkt {
             compatible = "zmk,behavior-hold-tap";
-            label = "RU_AS_LBKT";
+            label = "RU_AS_LBRC_LBKT";
             bindings = <&mc_ru_lbrc>, <&mc_ru_lbkt>;
 
             #binding-cells = <2>;
@@ -108,9 +108,9 @@
             flavor = "tap-preferred";
         };
 
-        ru_as_quote: ru_as_quote {
+        ru_as_siquote: ru_as_siquote {
             compatible = "zmk,behavior-hold-tap";
-            label = "RU_AS_QUOTE";
+            label = "RU_AS_SIQUOTE";
             bindings = <&mc_ru_si_quote>, <&kp>;
 
             #binding-cells = <2>;
@@ -119,9 +119,9 @@
             flavor = "tap-preferred";
         };
 
-        ru_as_rbkt: ru_as_rbkt {
+        ru_as_rbrc_rbkt: ru_as_rbrc_rbkt {
             compatible = "zmk,behavior-hold-tap";
-            label = "RU_AS_RBKT";
+            label = "RU_AS_RBRC_RBKT";
             bindings = <&mc_ru_rbrc>, <&mc_ru_rbkt>;
 
             #binding-cells = <2>;
@@ -130,9 +130,9 @@
             flavor = "tap-preferred";
         };
 
-        ru_as_lpar: ru_as_lpar {
+        ru_as_lt: ru_as_lt {
             compatible = "zmk,behavior-hold-tap";
-            label = "RU_AS_LPAR";
+            label = "RU_AS_LT";
             bindings = <&mc_ru_lt>, <&kp>;
 
             #binding-cells = <2>;
@@ -141,9 +141,9 @@
             flavor = "tap-preferred";
         };
 
-        ru_as_rpar: ru_as_rpar {
+        ru_as_gt: ru_as_gt {
             compatible = "zmk,behavior-hold-tap";
-            label = "RU_AS_RPAR";
+            label = "RU_AS_GT";
             bindings = <&mc_ru_gt>, <&kp>;
 
             #binding-cells = <2>;
@@ -152,9 +152,9 @@
             flavor = "tap-preferred";
         };
 
-        ru_as_grave: ru_as_grave {
+        ru_as_tilde_grave: ru_as_tilde_grave {
             compatible = "zmk,behavior-hold-tap";
-            label = "RU_AS_GRAVE";
+            label = "RU_AS_TILDE_GRAVE";
             bindings = <&mc_ru_tilde>, <&mc_ru_grave>;
 
             #binding-cells = <2>;
@@ -163,9 +163,9 @@
             flavor = "tap-preferred";
         };
 
-        ru_as_at: ru_as_at {
+        ru_as_dollar_at: ru_as_dollar_at {
             compatible = "zmk,behavior-hold-tap";
-            label = "RU_AS_AT";
+            label = "RU_AS_DOLLAR_AT";
             bindings = <&mc_ru_dollar>, <&mc_ru_at>;
 
             #binding-cells = <2>;
@@ -174,9 +174,9 @@
             flavor = "tap-preferred";
         };
 
-        ru_as_hash: ru_as_hash {
+        ru_as_caret_hash: ru_as_caret_hash {
             compatible = "zmk,behavior-hold-tap";
-            label = "RU_AS_HASH";
+            label = "RU_AS_CARET_HASH";
             bindings = <&mc_ru_caret>, <&mc_ru_hash>;
 
             #binding-cells = <2>;
@@ -185,9 +185,9 @@
             flavor = "tap-preferred";
         };
 
-        ru_as_slash: ru_as_slash {
+        ru_as_pipe: ru_as_pipe {
             compatible = "zmk,behavior-hold-tap";
-            label = "RU_AS_SLASH";
+            label = "RU_AS_PIPE";
             bindings = <&mc_ru_pipe>, <&kp>;
 
             #binding-cells = <2>;
@@ -221,7 +221,7 @@
         ru_as_excl: ru_as_excl {
             compatible = "zmk,behavior-hold-tap";
             label = "RU_AS_EXCL";
-            bindings = <&mc_single_exl>, <&kp>;
+            bindings = <&mc_single_excl>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -594,7 +594,7 @@
             label = "MC_SINGLE_UNDER";
         };
 
-        mc_single_exl: mc_single_exl {
+        mc_single_excl: mc_single_exl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap>, <&kp EXCL>;
@@ -666,10 +666,10 @@
 
         nav_ru_layer {
             bindings = <
-&trans  &kp ESC      &trans     &ru_as_at 0 0  &ru_as_amp 0 PERCENT  &trans           &ru_as_grave 0 0           &trans                &ru_as_excl 0 LS(N7)  &kp UP              &kp BSPC            &trans                 &ru_as_lbkt 0 0        &trans
-        &kp TAB      &kp LCTRL  &kp LSHFT      &kp LALT              &kp LGUI         &ru_as_eq 0 LS(EQUAL)      &ru_as_under 0 MINUS  &kp LEFT              &kp DOWN            &kp RIGHT           &ru_as_semi 0 LS(N6)   &ru_as_quote 0 LS(N2)
-        &kp LS(TAB)  &trans     &trans         &trans                &ru_as_hash 0 0  &ru_as_slash 0 LS(BSLH)    &ru_as_bslh 0 LS(N8)  &ru_as_dot 0 RET      &ru_as_lpar 0 LPAR  &ru_as_rpar 0 RPAR  &ru_as_dot 0 QUESTION  &ru_as_rbkt 0 0
-                                               &trans                &mc_single_spc   &trans                     &none                 &mc_single_spc        &none
+&trans  &kp ESC      &trans     &ru_as_dollar_at 0 0  &ru_as_amp 0 PERCENT  &trans                 &ru_as_tilde_grave 0 0    &trans                &ru_as_excl 0 LS(N7)  &kp UP            &kp BSPC          &trans                 &ru_as_lbrc_lbkt 0 0     &trans
+        &kp TAB      &kp LCTRL  &kp LSHFT             &kp LALT              &kp LGUI               &ru_as_eq 0 LS(EQUAL)     &ru_as_under 0 MINUS  &kp LEFT              &kp DOWN          &kp RIGHT         &ru_as_semi 0 LS(N6)   &ru_as_siquote 0 LS(N2)
+        &kp LS(TAB)  &trans     &trans                &trans                &ru_as_caret_hash 0 0  &ru_as_pipe 0 LS(BSLH)    &ru_as_bslh 0 LS(N8)  &ru_as_dot 0 RET      &ru_as_lt 0 LPAR  &ru_as_gt 0 RPAR  &ru_as_dot 0 QUESTION  &ru_as_rbrc_rbkt 0 0
+                                                      &trans                &mc_single_spc         &trans                    &none                 &mc_single_spc        &none
             >;
         };
 
