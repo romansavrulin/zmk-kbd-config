@@ -7,86 +7,264 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 
-#define DEF 0
-#define LWR 1
-#define RSE 2
-#define ADJ 3
+&lt { quick-tap-ms = <160>; };
 
-&lt {
-    quick_tap_ms = <200>;
-};
+&mt { quick-tap-ms = <160>; };
 
-&mt {
-    quick_tap_ms = <200>;
+&kscan0 {
+    debounce-press-ms = <1>;
+    debounce-release-ms = <10>;
 };
 
 / {
     combos {
         compatible = "zmk,combos";
 
-        kb_bootldr_l {
+        combo_bootldr {
             bindings = <&bootloader>;
-            key-positions = <53 5 0>;
+            key-positions = <40 6 1>;
         };
 
-        bt_clr {
+        combo_bt_clr {
             bindings = <&bt BT_CLR>;
-            key-positions = <53 5 38>;
+            key-positions = <26 6 40>;
         };
 
-        kb_bootloader_r {
-            bindings = <&bootloader>;
-            key-positions = <54 6 11>;
+        combo_bt0 {
+            bindings = <&bt BT_SEL 0>;
+            key-positions = <40 6 27>;
+        };
+
+        combo_bt1 {
+            bindings = <&bt BT_SEL 1>;
+            key-positions = <40 6 28>;
+        };
+
+        combo_bt2 {
+            bindings = <&bt BT_SEL 2>;
+            key-positions = <40 6 29>;
+        };
+
+        combo_bare_ru_tog {
+            bindings = <&tog 1>;
+            key-positions = <41 7 13>;
+            layers = <0 1>;
+        };
+
+        combo_bt_3 {
+            bindings = <&bt BT_SEL 3>;
+            key-positions = <6 40 30>;
+        };
+
+        combo_ru_en_tog {
+            bindings = <&tog 4>;
+            key-positions = <41 7 12>;
+            layers = <1 4>;
+        };
+
+        combo_en_to_bare {
+            bindings = <&mc_to_bare_en>;
+            key-positions = <41 7 13>;
+            layers = <4>;
+        };
+
+        output_toggle {
+            bindings = <&out OUT_TOG>;
+            key-positions = <41 7 10>;
+        };
+
+        combo_bt_4 {
+            bindings = <&bt BT_SEL 4>;
+            key-positions = <6 40 31>;
         };
     };
 
     behaviors {
-        n9_bspc: n9_bspc {
-            compatible = "zmk,behavior-tap-dance";
-            label = "N9_BSPC";
-            #binding-cells = <0>;
-            bindings = <&kp N9>, <&kp BSPC>;
+        as: as {
+            compatible = "zmk,behavior-hold-tap";
+            label = "AS";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+        };
+
+        lt_spc: lt_spc {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_SPC";
+            bindings = <&mo>, <&mc_single_tap>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <0 1 2 3 5 6 7 8 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 40 41 43 4 9>;
+        };
+
+        as_single: as_single {
+            compatible = "zmk,behavior-hold-tap";
+            label = "AS_SINGLE";
+            bindings = <&mc_single_tap>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+        };
+
+        as_sw_single: as_sw_single {
+            compatible = "zmk,behavior-hold-tap";
+            label = "AS_SW_SINGLE";
+            bindings = <&mc_sw_tap_sw>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+        };
+
+        sw_as_sw_single: sw_as_sw_single {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SW_AS_SW_SINGLE";
+            bindings = <&mc_sw_tap_sw>, <&mc_sw_tap_sw>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+        };
+
+        sw_as_single: sw_as_single {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SW_AS_SINGLE";
+            bindings = <&mc_single_tap>, <&mc_sw_tap_sw>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
         };
     };
 
     macros {
-        asterisk_pipe: asterisk_pipe {
+        mc_ru_en_sw: mc_ru_en_sw {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
-                <&kp SPACE>,
-                <&macro_wait_time 50>,
-                <&kp B>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&kp B &kp SPACE>;
+                <&macro_tap_time 80>,
+                <&kp CAPS>,
+                <&macro_wait_time 20>,
+                <&macro_tap>,
+                <&tog 4>;
 
-            label = "ASTERISK_PIPE";
+            label = "MC_RU_EN_SW";
+        };
+
+        mc_to_bare_en: mc_to_bare_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 4 &tog 1>;
+            label = "MC_TO_BARE_EN";
+        };
+
+        mc_single_tap: mc_single_tap {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_tap>, <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+
+            label = "MC_SINGLE_TAP";
+        };
+
+        mc_sw_tap_sw: mc_sw_tap_sw {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap_time 80>,
+                <&kp CAPS>,
+                <&macro_wait_time 20>,
+                <&macro_tap>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_tap_time 80>,
+                <&kp CLCK>,
+                <&macro_wait_time 20>;
+
+            label = "MC_SW_TAP_SW";
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        bare_keys_layer {
             bindings = <
-                  &kp ESCAPE  &kp N1  &kp N2    &kp N3     &kp N4    &kp N5       &kp N6    &kp N7       &kp N8     &kp N9    &kp N0    &kp BSPC
-&mt LSHFT ESCAPE  &kp TAB     &kp Q   &kp W     &kp E      &kp R     &kp T        &kp Y     &kp U        &kp I      &kp O     &kp P     &kp LBKT  &kp ENTER
-                  &kp CAPS    &kp A   &kp S     &kp D      &kp F     &kp G        &kp H     &kp J        &kp K      &kp L     &kp SEMI  &kp SQT
-                  &kp LCTRL   &kp M   &kp Z     &kp X      &kp C     &kp V        &kp B     &kp N        &kp COMMA  &kp DOT   &kp FSLH  &kp RBKT
-                                      &kp LGUI  &kp SPACE  &kp LALT  &kp RSHFT    &kp RALT  &lt 1 SPACE  &kp SPACE  &kp RGUI
+            &kp ESCAPE  &kp N1  &kp N2    &kp N3     &kp N4    &kp N5       &kp N6    &kp N7       &kp N8     &kp N9    &kp N0    &kp BSPC
+&mt LEFT_SHIFT ESCAPE  &kp TAB    &kp Q  &kp W  &kp E     &kp R      &kp T       &kp Y        &kp U      &kp I      &kp O    &kp P     &kp LBKT  &kp RET
+                       &kp CAPS   &kp A  &kp S  &kp D     &kp F      &kp G       &kp H        &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+                       &kp LCTRL  &kp M  &kp Z  &kp X     &kp C      &kp V       &kp B        &kp N      &kp COMMA  &kp DOT  &kp FSLH  &kp RBKT
+                                                &kp LGUI  &kp SPACE  &kp LALT    &lt 3 SPACE  &kp SPACE  &kp LGUI
             >;
         };
 
-        num_layer {
+        as_ru_layer {
             bindings = <
-        &kp TAB  &none   &none    &none    &none    &none           &asterisk_pipe   &none   &none   &kp BSPC    &kp BSPC   &kp BSPC
-&trans  &kp TAB  &kp F9  &kp F10  &kp F11  &kp F12  &kp LS(N9)      &kp LS(N0)       &kp N7  &kp N8  &kp N9      &kp BSPC   &kp LS(N9)  &kp ENTER
-        &none    &kp F5  &kp F6   &kp F7   &kp F8   &kp PLUS        &kp MINUS        &kp N4  &kp N5  &kp N6      &kp SEMI   &kp SQT
-        &trans   &kp F1  &kp F2   &kp F3   &kp F4   &kp KP_SLASH    &kp KP_ASTERISK  &kp N1  &kp N2  &kp N3      &kp SLASH  &kp LS(N0)
-                         &trans   &trans   &trans   &trans          &trans           &trans  &kp N0  &kp KP_DOT
+            &kp ESCAPE  &kp N1  &kp N2    &kp N3     &kp N4    &kp N5       &kp N6    &kp N7       &kp N8     &kp N9    &kp N0    &kp BSPC
+&mt LSHFT ESC  &kp TAB       &as LS(Q) Q  &as LS(W) W  &as LS(E) E  &as LS(R) R      &as LS(T) T    &as LS(Y) Y  &as LS(U) U      &as LS(I) I          &as LS(O) O      &as LS(P) P               &as LS(LBKT) LBKT  &kp ENTER
+               &mc_ru_en_sw  &as LS(A) A  &as LS(S) S  &as LS(D) D  &as LS(F) F      &as LS(G) G    &as LS(H) H  &as LS(J) J      &as LS(K) K          &as LS(L) L      &as LS(SEMI) SEMI         &as LS(SQT) SQT
+               &kp LCTRL     &as LS(M) M  &as LS(Z) Z  &as LS(X) X  &as LS(C) C      &as LS(V) V    &as LS(B) B  &as LS(N) N      &as LS(COMMA) COMMA  &as LS(DOT) DOT  &as_single FSLH QUESTION  &as LS(RBKT) RBKT
+                                                       &kp LWIN     &lt_spc 2 SPACE  &kp LALT       &lt 3 SPACE  &lt_spc 2 SPACE  &kp RGUI
+            >;
+        };
+
+        nav_ru_layer {
+            bindings = <
+            &kp ESCAPE  &kp N1  &kp N2    &kp N3     &kp N4    &kp N5       &kp N6    &kp N7       &kp N8     &kp N9    &kp N0    &kp BSPC
+&trans  &kp ESC      &trans     &sw_as_sw_single DOLLAR AT  &as_sw_single AMPS PERCENT  &trans                       &sw_as_sw_single TILDE GRAVE    &trans                  &as_single EXCL LS(N7)  &kp UP                 &kp BSPC               &trans                     &sw_as_sw_single LBRC LBKT         &trans
+        &kp TAB      &kp LCTRL  &kp LSHFT                   &kp LALT                    &kp LGUI                     &as_single EQUAL LS(EQUAL)      &as_single UNDER MINUS  &kp LEFT                &kp DOWN               &kp RIGHT              &as_single LS(N4) LS(N6)   &as_sw_single SINGLE_QUOTE LS(N2)
+        &kp LS(TAB)  &trans     &trans                      &trans                      &sw_as_sw_single CARET HASH  &as_sw_single PIPE LS(BSLH)     &as_single BSLH LS(N8)  &as_single SLASH RET    &as_sw_single LT LPAR  &as_sw_single GT RPAR  &as_single SLASH QUESTION  &sw_as_sw_single RBRC RBKT
+                                                            &trans                      &mc_single_tap SPACE         &trans                          &none                   &mc_single_tap SPACE    &none
+            >;
+        };
+
+        num_ru_layer {
+            bindings = <
+            &kp ESCAPE  &kp N1  &kp N2    &kp N3     &kp N4    &kp N5       &kp N6    &kp N7       &kp N8     &kp N9    &kp N0    &kp BSPC
+&trans  &kp TAB  &kp F9  &kp F10  &kp F11  &kp F12  &mc_single_tap LS(N9)       &mc_single_tap LS(N0)       &kp N7  &kp N8                 &kp N9  &kp BSPC                   &sw_as_sw_single LBRC LBKT         &kp ENTER
+        &none    &kp F5  &kp F6   &kp F7   &kp F8   &mc_single_tap PLUS         &mc_single_tap MINUS        &kp N4  &kp N5                 &kp N6  &as_single LS(N4) LS(N6)   &as_sw_single SINGLE_QUOTE LS(N2)
+        &trans   &kp F1  &kp F2   &kp F3   &kp F4   &mc_single_tap KP_DIVIDE    &mc_single_tap KP_ASTERISK  &kp N1  &kp N2                 &kp N3  &as_single SLASH QUESTION  &sw_as_sw_single RBRC RBKT
+                                  &trans   &trans   &mc_single_tap EQUAL        &trans                      &kp N0  &mc_single_tap KP_DOT
+            >;
+        };
+
+        as_en_layer {
+            bindings = <
+            &kp ESCAPE  &kp N1  &kp N2    &kp N3     &kp N4    &kp N5       &kp N6    &kp N7       &kp N8     &kp N9    &kp N0    &kp BSPC
+&mt LSHFT ESC  &kp TAB       &as LS(Q) Q  &as LS(W) W  &as LS(E) E  &as LS(R) R      &as LS(T) T    &as LS(Y) Y  &as LS(U) U      &as LS(I) I          &as LS(O) O             &as LS(P) P              &as_single LS(LBKT) LBKT             &kp ENTER
+               &mc_ru_en_sw  &as LS(A) A  &as LS(S) S  &as LS(D) D  &as LS(F) F      &as LS(G) G    &as LS(H) H  &as LS(J) J      &as LS(K) K          &as LS(L) L             &as_single SEMI COLON    &as_single APOSTROPHE DOUBLE_QUOTES
+               &kp LCTRL     &as LS(M) M  &as LS(Z) Z  &as LS(X) X  &as LS(C) C      &as LS(V) V    &as LS(B) B  &as LS(N) N      &as LS(COMMA) COMMA  &as_single LS(DOT) DOT  &as_single PERIOD COMMA  &as_single LS(RBKT) RBKT
+                                                       &kp LWIN     &lt_spc 5 SPACE  &kp LALT       &lt 6 SPACE  &lt_spc 5 SPACE  &kp RGUI
+            >;
+        };
+
+        nav_en_layer {
+            bindings = <
+            &kp ESCAPE  &kp N1  &kp N2    &kp N3     &kp N4    &kp N5       &kp N6    &kp N7       &kp N8     &kp N9    &kp N0    &kp BSPC
+&trans  &kp ESCAPE   &trans     &as_single DOLLAR AT  &as_single AMPS PERCENT  &trans                 &as_single TILDE GRAVE    &trans                       &as_single EXCLAMATION QUESTION  &kp UP              &kp BSPC            &trans  &trans  &trans
+        &kp TAB      &kp LCTRL  &kp LSHFT             &kp LALT                 &kp LGUI               &as_single EQUAL PLUS     &as_single UNDERSCORE MINUS  &kp LEFT                         &kp DOWN            &kp RIGHT           &trans  &trans
+        &kp LS(TAB)  &trans     &trans                &trans                   &as_single CARET HASH  &as_single PIPE SLASH     &as_single BSLH ASTERISK     &as_single DOT RET               &as_single LT LPAR  &as_single GT RPAR  &trans  &trans
+                                                      &trans                   &mc_single_tap SPACE   &trans                    &none                        &mc_single_tap SPACE             &none
+            >;
+        };
+
+        num_en_layer {
+            bindings = <
+            &kp ESCAPE  &kp N1  &kp N2    &kp N3     &kp N4    &kp N5       &kp N6    &kp N7       &kp N8     &kp N9    &kp N0    &kp BSPC
+&trans  &kp TAB  &kp F9  &kp F10  &kp F11  &kp F12  &mc_single_tap LS(N9)       &mc_single_tap LS(N0)       &kp N7  &kp N8                 &kp N9  &kp BSPC  &trans  &kp ENTER
+        &none    &kp F5  &kp F6   &kp F7   &kp F8   &mc_single_tap PLUS         &mc_single_tap MINUS        &kp N4  &kp N5                 &kp N6  &trans    &trans
+        &trans   &kp F1  &kp F2   &kp F3   &kp F4   &mc_single_tap KP_DIVIDE    &mc_single_tap KP_ASTERISK  &kp N1  &kp N2                 &kp N3  &trans    &trans
+                                  &trans   &trans   &mc_single_tap EQUAL        &trans                      &kp N0  &mc_single_tap KP_DOT
             >;
         };
     };
