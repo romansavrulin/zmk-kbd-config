@@ -5,7 +5,6 @@
  */
 
 #include "mriya.dtsi"
-#include <behaviors.dtsi>
 
 &default_transform {
 	col-offset = <6>;
