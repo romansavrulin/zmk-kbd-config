@@ -86,9 +86,9 @@
     };
 
     behaviors {
-        ru_as_common: ru_as_common {
+        as: as {
             compatible = "zmk,behavior-hold-tap";
-            label = "RU_AS_COMMON";
+            label = "AS";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -216,72 +216,6 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
             hold-trigger-key-positions = <0 1 2 3 5 6 7 8 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 40 41 43 4 9>;
-        };
-
-        ru_as_excl: ru_as_excl {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RU_AS_EXCL";
-            bindings = <&mc_single_excl>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-        };
-
-        ru_as_under: ru_as_under {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RU_AS_UNDER";
-            bindings = <&mc_single_under>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-        };
-
-        ru_as_bslh: ru_as_bslh {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RU_AS_BSLH";
-            bindings = <&mc_single_bslh>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-        };
-
-        ru_as_dot: ru_as_dot {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RU_AS_DOT";
-            bindings = <&mc_single_dot>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-        };
-
-        ru_as_semi: ru_as_semi {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RU_AS_SEMI";
-            bindings = <&mc_single_semic>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-        };
-
-        ru_as_eq: ru_as_eq {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RU_AS_EQ";
-            bindings = <&mc_single_eql>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
         };
 
         as_single: as_single {
@@ -676,19 +610,19 @@
 
         as_ru_layer {
             bindings = <
-&mt LSHFT ESC  &kp TAB       &ru_as_common LS(Q) Q  &ru_as_common LS(W) W  &ru_as_common LS(E) E  &ru_as_common LS(R) R  &ru_as_common LS(T) T    &ru_as_common LS(Y) Y  &ru_as_common LS(U) U  &ru_as_common LS(I) I          &ru_as_common LS(O) O      &ru_as_common LS(P) P        &ru_as_common LS(LBKT) LBKT  &kp ENTER
-               &mc_ru_en_sw  &ru_as_common LS(A) A  &ru_as_common LS(S) S  &ru_as_common LS(D) D  &ru_as_common LS(F) F  &ru_as_common LS(G) G    &ru_as_common LS(H) H  &ru_as_common LS(J) J  &ru_as_common LS(K) K          &ru_as_common LS(L) L      &ru_as_common LS(SEMI) SEMI  &ru_as_common LS(SQT) SQT
-               &kp LCTRL     &ru_as_common LS(M) M  &ru_as_common LS(Z) Z  &ru_as_common LS(X) X  &ru_as_common LS(C) C  &ru_as_common LS(V) V    &ru_as_common LS(B) B  &ru_as_common LS(N) N  &ru_as_common LS(COMMA) COMMA  &ru_as_common LS(DOT) DOT  &ru_as_dot 0 FSLH            &ru_as_common LS(RBKT) RBKT
-                                                                           &kp LWIN               &lt_spc 2 SPACE        &kp LALT                 &lt 3 SPACE            &lt_spc 2 SPACE        &kp RGUI
+&mt LSHFT ESC  &kp TAB       &as LS(Q) Q  &as LS(W) W  &as LS(E) E  &as LS(R) R      &as LS(T) T    &as LS(Y) Y  &as LS(U) U      &as LS(I) I          &as LS(O) O      &as LS(P) P               &as LS(LBKT) LBKT  &kp ENTER
+               &mc_ru_en_sw  &as LS(A) A  &as LS(S) S  &as LS(D) D  &as LS(F) F      &as LS(G) G    &as LS(H) H  &as LS(J) J      &as LS(K) K          &as LS(L) L      &as LS(SEMI) SEMI         &as LS(SQT) SQT
+               &kp LCTRL     &as LS(M) M  &as LS(Z) Z  &as LS(X) X  &as LS(C) C      &as LS(V) V    &as LS(B) B  &as LS(N) N      &as LS(COMMA) COMMA  &as LS(DOT) DOT  &as_single FSLH QUESTION  &as LS(RBKT) RBKT
+                                                       &kp LWIN     &lt_spc 2 SPACE  &kp LALT       &lt 3 SPACE  &lt_spc 2 SPACE  &kp RGUI
             >;
         };
 
         nav_ru_layer {
             bindings = <
-&trans  &kp ESC      &trans     &ru_as_dollar_at 0 0  &ru_as_amp 0 PERCENT  &trans                 &ru_as_tilde_grave 0 0    &trans                  &ru_as_excl 0 LS(N7)  &kp UP            &kp BSPC          &trans                     &ru_as_lbrc_lbkt 0 0     &trans
-        &kp TAB      &kp LCTRL  &kp LSHFT             &kp LALT              &kp LGUI               &ru_as_eq 0 LS(EQUAL)     &ru_as_under 0 MINUS    &kp LEFT              &kp DOWN          &kp RIGHT         &as_single 0 LS(N6)        &ru_as_siquote 0 LS(N2)
-        &kp LS(TAB)  &trans     &trans                &trans                &ru_as_caret_hash 0 0  &ru_as_pipe 0 LS(BSLH)    &as_single PIPE LS(N8)  &as_single RET SLASH  &ru_as_lt 0 LPAR  &ru_as_gt 0 RPAR  &as_single SLASH QUESTION  &ru_as_rbrc_rbkt 0 0
-                                                      &trans                &mc_single_spc         &trans                    &none                   &mc_single_spc        &none
+&trans  &kp ESC      &trans     &ru_as_dollar_at 0 0  &ru_as_amp 0 PERCENT  &trans                 &ru_as_tilde_grave 0 0        &trans                  &as_single EXCL LS(N7)  &kp UP            &kp BSPC          &trans                     &ru_as_lbrc_lbkt 0 0     &trans
+        &kp TAB      &kp LCTRL  &kp LSHFT             &kp LALT              &kp LGUI               &as_single EQUAL LS(EQUAL)    &as_single UNDER MINUS  &kp LEFT                &kp DOWN          &kp RIGHT         &as_single LS(N4) LS(N6)   &ru_as_siquote 0 LS(N2)
+        &kp LS(TAB)  &trans     &trans                &trans                &ru_as_caret_hash 0 0  &ru_as_pipe 0 LS(BSLH)        &as_single BSLH LS(N8)  &as_single SLASH RET    &ru_as_lt 0 LPAR  &ru_as_gt 0 RPAR  &as_single SLASH QUESTION  &ru_as_rbrc_rbkt 0 0
+                                                      &trans                &mc_single_spc         &trans                        &none                   &mc_single_spc          &none
             >;
         };
 
@@ -703,19 +637,19 @@
 
         as_en_layer {
             bindings = <
-&mt LSHFT ESC  &kp TAB       &ru_as_common LS(Q) Q  &ru_as_common LS(W) W  &ru_as_common LS(E) E  &ru_as_common LS(R) R  &ru_as_common LS(T) T    &ru_as_common LS(Y) Y  &ru_as_common LS(U) U  &ru_as_common LS(I) I          &ru_as_common LS(O) O      &ru_as_common LS(P) P       &ru_as_common LS(LBKT) LBKT             &kp ENTER
-               &mc_ru_en_sw  &ru_as_common LS(A) A  &ru_as_common LS(S) S  &ru_as_common LS(D) D  &ru_as_common LS(F) F  &ru_as_common LS(G) G    &ru_as_common LS(H) H  &ru_as_common LS(J) J  &ru_as_common LS(K) K          &ru_as_common LS(L) L      &ru_as_common SEMI COLON    &ru_as_common APOSTROPHE DOUBLE_QUOTES
-               &kp LCTRL     &ru_as_common LS(M) M  &ru_as_common LS(Z) Z  &ru_as_common LS(X) X  &ru_as_common LS(C) C  &ru_as_common LS(V) V    &ru_as_common LS(B) B  &ru_as_common LS(N) N  &ru_as_common LS(COMMA) COMMA  &ru_as_common LS(DOT) DOT  &ru_as_common PERIOD COMMA  &ru_as_common LS(RBKT) RBKT
-                                                                           &kp LWIN               &lt_spc 5 SPACE        &kp LALT                 &lt 6 SPACE            &lt_spc 5 SPACE        &kp RGUI
+&mt LSHFT ESC  &kp TAB       &as LS(Q) Q  &as LS(W) W  &as LS(E) E  &as LS(R) R      &as LS(T) T    &as LS(Y) Y  &as LS(U) U      &as LS(I) I          &as LS(O) O      &as LS(P) P       &as LS(LBKT) LBKT             &kp ENTER
+               &mc_ru_en_sw  &as LS(A) A  &as LS(S) S  &as LS(D) D  &as LS(F) F      &as LS(G) G    &as LS(H) H  &as LS(J) J      &as LS(K) K          &as LS(L) L      &as SEMI COLON    &as APOSTROPHE DOUBLE_QUOTES
+               &kp LCTRL     &as LS(M) M  &as LS(Z) Z  &as LS(X) X  &as LS(C) C      &as LS(V) V    &as LS(B) B  &as LS(N) N      &as LS(COMMA) COMMA  &as LS(DOT) DOT  &as PERIOD COMMA  &as LS(RBKT) RBKT
+                                                       &kp LWIN     &lt_spc 5 SPACE  &kp LALT       &lt 6 SPACE  &lt_spc 5 SPACE  &kp RGUI
             >;
         };
 
         nav_en_layer {
             bindings = <
-&trans  &kp ESCAPE   &trans     &ru_as_common DOLLAR AT  &ru_as_common AMPS PERCENT  &trans                    &ru_as_common TILDE GRAVE    &trans                          &ru_as_common EXCLAMATION QUESTION  &kp UP                 &kp BSPC               &trans  &trans  &trans
-        &kp TAB      &kp LCTRL  &kp LSHFT                &kp LALT                    &kp LGUI                  &ru_as_common EQUAL PLUS     &ru_as_common UNDERSCORE MINUS  &kp LEFT                            &kp DOWN               &kp RIGHT              &trans  &trans
-        &kp LS(TAB)  &trans     &trans                   &trans                      &ru_as_common CARET HASH  &ru_as_common PIPE SLASH     &ru_as_common BSLH ASTERISK     &ru_as_common DOT RET               &ru_as_common LT LPAR  &ru_as_common GT RPAR  &trans  &trans
-                                                         &trans                      &mc_single_spc            &trans                       &none                           &mc_single_spc                      &none
+&trans  &kp ESCAPE   &trans     &as DOLLAR AT  &as AMPS PERCENT  &trans          &as TILDE GRAVE    &trans                &as EXCLAMATION QUESTION  &kp UP       &kp BSPC     &trans  &trans  &trans
+        &kp TAB      &kp LCTRL  &kp LSHFT      &kp LALT          &kp LGUI        &as EQUAL PLUS     &as UNDERSCORE MINUS  &kp LEFT                  &kp DOWN     &kp RIGHT    &trans  &trans
+        &kp LS(TAB)  &trans     &trans         &trans            &as CARET HASH  &as PIPE SLASH     &as BSLH ASTERISK     &as DOT RET               &as LT LPAR  &as GT RPAR  &trans  &trans
+                                               &trans            &mc_single_spc  &trans             &none                 &mc_single_spc            &none
             >;
         };
 
