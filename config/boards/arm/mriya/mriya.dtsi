@@ -9,8 +9,6 @@
 
 #include <dt-bindings/zmk/matrix_transform.h>
 
-#include <behaviors.dtsi>
-
 
 / {
 	model = "mriya";
