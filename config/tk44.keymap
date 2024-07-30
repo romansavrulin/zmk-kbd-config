@@ -97,116 +97,6 @@
             flavor = "tap-preferred";
         };
 
-        ru_as_lbrc_lbkt: ru_as_lbrc_lbkt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RU_AS_LBRC_LBKT";
-            bindings = <&mc_ru_lbrc>, <&mc_ru_lbkt>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-        };
-
-        ru_as_siquote: ru_as_siquote {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RU_AS_SIQUOTE";
-            bindings = <&mc_ru_si_quote>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-        };
-
-        ru_as_rbrc_rbkt: ru_as_rbrc_rbkt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RU_AS_RBRC_RBKT";
-            bindings = <&mc_ru_rbrc>, <&mc_ru_rbkt>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-        };
-
-        ru_as_lt: ru_as_lt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RU_AS_LT";
-            bindings = <&mc_ru_lt>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-        };
-
-        ru_as_gt: ru_as_gt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RU_AS_GT";
-            bindings = <&mc_ru_gt>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-        };
-
-        ru_as_tilde_grave: ru_as_tilde_grave {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RU_AS_TILDE_GRAVE";
-            bindings = <&mc_ru_tilde>, <&mc_ru_grave>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-        };
-
-        ru_as_dollar_at: ru_as_dollar_at {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RU_AS_DOLLAR_AT";
-            bindings = <&mc_ru_dollar>, <&mc_ru_at>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-        };
-
-        ru_as_caret_hash: ru_as_caret_hash {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RU_AS_CARET_HASH";
-            bindings = <&mc_ru_caret>, <&mc_ru_hash>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-        };
-
-        ru_as_pipe: ru_as_pipe {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RU_AS_PIPE";
-            bindings = <&mc_ru_pipe>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-        };
-
-        ru_as_amp: ru_as_amp {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RU_AS_AMP";
-            bindings = <&mc_ru_amp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-        };
-
         lt_spc: lt_spc {
             compatible = "zmk,behavior-hold-tap";
             label = "LT_SPC";
@@ -229,17 +119,6 @@
             flavor = "tap-preferred";
         };
 
-        sw_as_single: sw_as_single {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SW_AS_SINGLE";
-            bindings = <&mc_single_tap>, <&mc_sw_tap_sw>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-        };
-
         as_sw_single: as_sw_single {
             compatible = "zmk,behavior-hold-tap";
             label = "AS_SW_SINGLE";
@@ -255,6 +134,17 @@
             compatible = "zmk,behavior-hold-tap";
             label = "SW_AS_SW_SINGLE";
             bindings = <&mc_sw_tap_sw>, <&mc_sw_tap_sw>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+        };
+
+        sw_as_single: sw_as_single {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SW_AS_SINGLE";
+            bindings = <&mc_single_tap>, <&mc_sw_tap_sw>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -668,10 +558,10 @@
 
         nav_ru_layer {
             bindings = <
-&trans  &kp ESC      &trans     &ru_as_dollar_at 0 0  &ru_as_amp 0 PERCENT  &trans                 &ru_as_tilde_grave 0 0        &trans                  &as_single EXCL LS(N7)  &kp UP            &kp BSPC          &trans                     &ru_as_lbrc_lbkt 0 0     &trans
-        &kp TAB      &kp LCTRL  &kp LSHFT             &kp LALT              &kp LGUI               &as_single EQUAL LS(EQUAL)    &as_single UNDER MINUS  &kp LEFT                &kp DOWN          &kp RIGHT         &as_single LS(N4) LS(N6)   &ru_as_siquote 0 LS(N2)
-        &kp LS(TAB)  &trans     &trans                &trans                &ru_as_caret_hash 0 0  &ru_as_pipe 0 LS(BSLH)        &as_single BSLH LS(N8)  &as_single SLASH RET    &ru_as_lt 0 LPAR  &ru_as_gt 0 RPAR  &as_single SLASH QUESTION  &ru_as_rbrc_rbkt 0 0
-                                                      &trans                &mc_single_spc         &trans                        &none                   &mc_single_spc          &none
+&trans  &kp ESC      &trans     &sw_as_sw_single DOLLAR AT  &as_sw_single AMPS PERCENT  &trans                       &sw_as_sw_single TILDE GRAVE    &trans                  &as_single EXCL LS(N7)  &kp UP                 &kp BSPC               &trans                     &sw_as_sw_single LBRC LBKT         &trans
+        &kp TAB      &kp LCTRL  &kp LSHFT                   &kp LALT                    &kp LGUI                     &as_single EQUAL LS(EQUAL)      &as_single UNDER MINUS  &kp LEFT                &kp DOWN               &kp RIGHT              &as_single LS(N4) LS(N6)   &as_sw_single SINGLE_QUOTE LS(N2)
+        &kp LS(TAB)  &trans     &trans                      &trans                      &sw_as_sw_single CARET HASH  &as_sw_single PIPE LS(BSLH)     &as_single BSLH LS(N8)  &as_single SLASH RET    &as_sw_single LT LPAR  &as_sw_single GT RPAR  &as_single SLASH QUESTION  &sw_as_sw_single RBRC RBKT
+                                                            &trans                      &mc_single_spc               &trans                          &none                   &mc_single_spc          &none
             >;
         };
 
