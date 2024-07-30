@@ -40,7 +40,7 @@
 		compatible = "zmk,kscan-gpio-matrix";
 		label = "KSCAN";
 
-		wakeup-source;
+/*		wakeup-source; */
 
 		diode-direction = "col2row";
 		row-gpios
