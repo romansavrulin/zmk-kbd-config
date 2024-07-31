@@ -224,17 +224,17 @@
 &trans  &kp ESC      &trans     &sw_as_sw_single DOLLAR AT  &as_sw_single AMPS PERCENT  &trans                       &sw_as_sw_single TILDE GRAVE    &trans                  &as_single EXCL LS(N7)  &kp UP                 &kp BSPC               &trans                     &sw_as_sw_single LBRC LBKT         &trans
         &kp TAB      &kp LCTRL  &kp LSHFT                   &kp LALT                    &kp LGUI                     &as_single EQUAL LS(EQUAL)      &as_single UNDER MINUS  &kp LEFT                &kp DOWN               &kp RIGHT              &as_single LS(N4) LS(N6)   &as_sw_single SINGLE_QUOTE LS(N2)
         &kp LS(TAB)  &trans     &trans                      &trans                      &sw_as_sw_single CARET HASH  &as_sw_single PIPE LS(BSLH)     &as_single BSLH LS(N8)  &as_single SLASH RET    &as_sw_single LT LPAR  &as_sw_single GT RPAR  &as_single SLASH QUESTION  &sw_as_sw_single RBRC RBKT
-                                &kp LGUI                    &lt_spc 2 SPACE             &kp LALT                     &kp RSHFT                       &kp RALT                &lt 3 SPACE             &lt_spc 2 SPACE        &kp RGUI
+                                &trans                      &mc_single_tap SPACE        &trans                       &trans                          &none                   &none                   &mc_single_tap SPACE   &none
             >;
         };
 
         num_ru_layer {
             bindings = <
-        &kp ESCAPE  &kp N1  &kp N2    &kp N3           &kp N4    &kp N5                      &kp N6                      &kp N7       &kp N8           &kp N9    &kp N0                     &kp BSPC
-&trans  &kp TAB     &kp F9  &kp F10   &kp F11          &kp F12   &mc_single_tap LS(N9)       &mc_single_tap LS(N0)       &kp N7       &kp N8           &kp N9    &kp BSPC                   &sw_as_sw_single LBRC LBKT         &kp ENTER
-        &none       &kp F5  &kp F6    &kp F7           &kp F8    &mc_single_tap PLUS         &mc_single_tap MINUS        &kp N4       &kp N5           &kp N6    &as_single LS(N4) LS(N6)   &as_sw_single SINGLE_QUOTE LS(N2)
-        &trans      &kp F1  &kp F2    &kp F3           &kp F4    &mc_single_tap KP_DIVIDE    &mc_single_tap KP_ASTERISK  &kp N1       &kp N2           &kp N3    &as_single SLASH QUESTION  &sw_as_sw_single RBRC RBKT
-                            &kp LGUI  &lt_spc 2 SPACE  &kp LALT  &kp RSHFT                   &kp RALT                    &lt 3 SPACE  &lt_spc 2 SPACE  &kp RGUI
+        &kp ESCAPE  &kp N1  &kp N2   &kp N3   &kp N4   &kp N5                      &kp N6                      &kp N7  &kp N8  &kp N9      &kp N0                     &kp BSPC
+&trans  &kp TAB     &kp F9  &kp F10  &kp F11  &kp F12  &mc_single_tap LS(N9)       &mc_single_tap LS(N0)       &kp N7  &kp N8  &kp N9      &kp BSPC                   &sw_as_sw_single LBRC LBKT         &kp ENTER
+        &none       &kp F5  &kp F6   &kp F7   &kp F8   &mc_single_tap PLUS         &mc_single_tap MINUS        &kp N4  &kp N5  &kp N6      &as_single LS(N4) LS(N6)   &as_sw_single SINGLE_QUOTE LS(N2)
+        &trans      &kp F1  &kp F2   &kp F3   &kp F4   &mc_single_tap KP_DIVIDE    &mc_single_tap KP_ASTERISK  &kp N1  &kp N2  &kp N3      &as_single SLASH QUESTION  &sw_as_sw_single RBRC RBKT
+                            &trans   &trans   &trans   &kp EQUAL                   &trans                      &trans  &kp N0  &kp KP_DOT
             >;
         };
 
@@ -244,27 +244,27 @@
 &mt LSHFT ESC  &kp TAB       &as LS(Q) Q  &as LS(W) W  &as LS(E) E      &as LS(R) R  &as LS(T) T    &as LS(Y) Y  &as LS(U) U  &as LS(I) I          &as LS(O) O             &as LS(P) P              &as_single LS(LBKT) LBKT             &kp ENTER
                &mc_ru_en_sw  &as LS(A) A  &as LS(S) S  &as LS(D) D      &as LS(F) F  &as LS(G) G    &as LS(H) H  &as LS(J) J  &as LS(K) K          &as LS(L) L             &as_single SEMI COLON    &as_single APOSTROPHE DOUBLE_QUOTES
                &kp LCTRL     &as LS(M) M  &as LS(Z) Z  &as LS(X) X      &as LS(C) C  &as LS(V) V    &as LS(B) B  &as LS(N) N  &as LS(COMMA) COMMA  &as_single LS(DOT) DOT  &as_single PERIOD COMMA  &as_single LS(RBKT) RBKT
-                                          &kp LGUI     &lt_spc 2 SPACE  &kp LALT     &kp RSHFT      &kp RALT     &lt 3 SPACE  &lt_spc 2 SPACE      &kp RGUI
+                                          &kp LGUI     &lt_spc 5 SPACE  &kp LALT     &kp RSHFT      &kp RALT     &lt 6 SPACE  &lt_spc 5 SPACE      &kp RGUI
             >;
         };
 
         nav_en_layer {
             bindings = <
-        &kp ESCAPE   &kp N1     &kp N2                &kp N3                   &kp N4                 &kp N5                    &kp N6                       &kp N7                           &kp N8              &kp N9              &kp N0  &kp BSPC
-&trans  &kp ESCAPE   &trans     &as_single DOLLAR AT  &as_single AMPS PERCENT  &trans                 &as_single TILDE GRAVE    &trans                       &as_single EXCLAMATION QUESTION  &kp UP              &kp BSPC            &trans  &trans    &trans
-        &kp TAB      &kp LCTRL  &kp LSHFT             &kp LALT                 &kp LGUI               &as_single EQUAL PLUS     &as_single UNDERSCORE MINUS  &kp LEFT                         &kp DOWN            &kp RIGHT           &trans  &trans
-        &kp LS(TAB)  &trans     &trans                &trans                   &as_single CARET HASH  &as_single PIPE SLASH     &as_single BSLH ASTERISK     &as_single DOT RET               &as_single LT LPAR  &as_single GT RPAR  &trans  &trans
-                                &kp LGUI              &lt_spc 2 SPACE          &kp LALT               &kp RSHFT                 &kp RALT                     &lt 3 SPACE                      &lt_spc 2 SPACE     &kp RGUI
+        &kp ESCAPE   &kp N1     &kp N2                &kp N3                   &kp N4                 &kp N5                    &kp N6                       &kp N7                           &kp N8                &kp N9              &kp N0  &kp BSPC
+&trans  &kp ESCAPE   &trans     &as_single DOLLAR AT  &as_single AMPS PERCENT  &trans                 &as_single TILDE GRAVE    &trans                       &as_single EXCLAMATION QUESTION  &kp UP                &kp BSPC            &trans  &trans    &trans
+        &kp TAB      &kp LCTRL  &kp LSHFT             &kp LALT                 &kp LGUI               &as_single EQUAL PLUS     &as_single UNDERSCORE MINUS  &kp LEFT                         &kp DOWN              &kp RIGHT           &trans  &trans
+        &kp LS(TAB)  &trans     &trans                &trans                   &as_single CARET HASH  &as_single PIPE SLASH     &as_single BSLH ASTERISK     &as_single DOT RET               &as_single LT LPAR    &as_single GT RPAR  &trans  &trans
+                                &trans                &mc_single_tap SPACE     &trans                 &trans                    &none                        &none                            &mc_single_tap SPACE  &none
             >;
         };
 
         num_en_layer {
             bindings = <
-        &kp ESCAPE  &kp N1  &kp N2    &kp N3           &kp N4    &kp N5                      &kp N6                      &kp N7       &kp N8           &kp N9    &kp N0    &kp BSPC
-&trans  &kp TAB     &kp F9  &kp F10   &kp F11          &kp F12   &mc_single_tap LS(N9)       &mc_single_tap LS(N0)       &kp N7       &kp N8           &kp N9    &kp BSPC  &trans    &kp ENTER
-        &none       &kp F5  &kp F6    &kp F7           &kp F8    &mc_single_tap PLUS         &mc_single_tap MINUS        &kp N4       &kp N5           &kp N6    &trans    &trans
-        &trans      &kp F1  &kp F2    &kp F3           &kp F4    &mc_single_tap KP_DIVIDE    &mc_single_tap KP_ASTERISK  &kp N1       &kp N2           &kp N3    &trans    &trans
-                            &kp LGUI  &lt_spc 2 SPACE  &kp LALT  &kp RSHFT                   &kp RALT                    &lt 3 SPACE  &lt_spc 2 SPACE  &kp RGUI
+        &kp ESCAPE  &kp N1  &kp N2   &kp N3   &kp N4   &kp N5                      &kp N6                      &kp N7  &kp N8  &kp N9                 &kp N0    &kp BSPC
+&trans  &kp TAB     &kp F9  &kp F10  &kp F11  &kp F12  &mc_single_tap LS(N9)       &mc_single_tap LS(N0)       &kp N7  &kp N8  &kp N9                 &kp BSPC  &trans    &kp ENTER
+        &none       &kp F5  &kp F6   &kp F7   &kp F8   &mc_single_tap PLUS         &mc_single_tap MINUS        &kp N4  &kp N5  &kp N6                 &trans    &trans
+        &trans      &kp F1  &kp F2   &kp F3   &kp F4   &mc_single_tap KP_DIVIDE    &mc_single_tap KP_ASTERISK  &kp N1  &kp N2  &kp N3                 &trans    &trans
+                            &trans   &trans   &trans   &kp EQUAL                   &trans                      &trans  &kp N0  &mc_single_tap KP_DOT
             >;
         };
     };
