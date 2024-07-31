@@ -1,4 +1,3 @@
 include:
   - board: mriya_left
   - board: mriya_right
-    shield: settings_reset
