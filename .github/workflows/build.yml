@@ -2,4 +2,4 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: romansavrulin/zmk/.github/workflows/build-user-config.yml@cont-layer
+    uses: romansavrulin/zmk/.github/workflows/build-user-config.yml@key-merger
