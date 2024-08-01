@@ -12,6 +12,7 @@
 #define FROM_TO(row, col) (((row) << 8) + (col))
 
 &lt { quick-tap-ms = <160>; };
+
 &mt { quick-tap-ms = <160>; };
 
 &kscan0 {
@@ -22,14 +23,14 @@
 &default_merger {
     map = <
                 FROM_TO(56,51)
-          >;
+    >;
 };
 
 / {
     combos {
         compatible = "zmk,combos";
 
-        combo_bootldr {
+        combo_l_boot {
             bindings = <&bootloader>;
             key-positions = <0 5 53>;
         };
@@ -72,9 +73,14 @@
             layers = <4>;
         };
 
-        output_toggle {
+        combo_output_toggle {
             bindings = <&out OUT_TOG>;
             key-positions = <54 6 22>;
+        };
+
+        combo_r_boot {
+            bindings = <&bootloader>;
+            key-positions = <6 57 11>;
         };
     };
 
