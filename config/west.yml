@@ -5,7 +5,7 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: button-merger-tk44
+      revision: key-merger
       import: app/west.yml
   self:
     path: config

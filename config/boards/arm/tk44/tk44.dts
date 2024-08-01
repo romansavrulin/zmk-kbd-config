@@ -19,6 +19,7 @@
 		zmk,kscan = &kscan0;
 		zmk,matrix_transform = &tk44_transform;
 	    zephyr,console = &cdc_acm_uart;
+	    zmk,key_merger = &default_merger;
 		zmk,battery = &vbatt;
 	};
 
@@ -33,6 +34,11 @@
 		                                    RC(3,3) RC(3,4) RC(3,5)  RC(3,6) RC(3,7) RC(3,8)
         >;
     };
+
+    default_merger: key_merger_0 {
+		compatible = "zmk,key-merger";
+		map = <>;
+	};
 
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
