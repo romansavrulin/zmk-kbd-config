@@ -1,4 +1,5 @@
 include:
   - board: mriya_left
+    snippet: zmk-usb-logging
   - board: mriya_right
     snippet: zmk-usb-logging
