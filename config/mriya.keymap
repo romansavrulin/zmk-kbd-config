@@ -39,7 +39,7 @@
 
         combo_bt1 {
             bindings = <&bt BT_SEL 1>;
-            key-positions = <53 5 40>;
+            key-positions = <53 5 42>;
         };
 
         combo_bt2 {
@@ -51,11 +51,6 @@
             bindings = <&tog 1>;
             key-positions = <6 54 25>;
             layers = <0 1>;
-        };
-
-        combo_bt_3 {
-            bindings = <&bt BT_SEL 3>;
-            key-positions = <53 42 5>;
         };
 
         combo_ru_en_tog {
@@ -73,11 +68,6 @@
         output_toggle {
             bindings = <&out OUT_TOG>;
             key-positions = <54 6 22>;
-        };
-
-        combo_bt_4 {
-            bindings = <&bt BT_SEL 4>;
-            key-positions = <43 5 53>;
         };
     };
 
