@@ -190,6 +190,19 @@
 
             label = "MC_SW_TAP_SW";
         };
+
+        mc_nav_for_num_bare: mc_nav_for_num_bare {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp SPACE &to 6>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp SPACE &to 0>;
+
+            label = "MC_NAV_FOR_NUM_BARE";
+        };
     };
 
     keymap {
@@ -197,10 +210,10 @@
 
         bare_keys_layer {
             bindings = <
-&mt LEFT_SHIFT ESCAPE  &kp TAB    &kp Q  &kp W  &kp E     &kp R      &kp T       &kp Y        &kp U      &kp I      &kp O    &kp P     &kp LBKT  &kp RET
-                       &kp CAPS   &kp A  &kp S  &kp D     &kp F      &kp G       &kp H        &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-                       &kp LCTRL  &kp M  &kp Z  &kp X     &kp C      &kp V       &kp B        &kp N      &kp COMMA  &kp DOT  &kp FSLH  &kp RBKT
-                                                &kp LGUI  &kp SPACE  &kp LALT    &lt 6 SPACE  &kp SPACE  &kp LGUI
+&mt LEFT_SHIFT ESCAPE  &kp TAB    &kp Q  &kp W  &kp E     &kp R      &kp T       &kp Y                 &kp U      &kp I      &kp O    &kp P     &kp LBKT  &kp RET
+                       &kp CAPS   &kp A  &kp S  &kp D     &kp F      &kp G       &kp H                 &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+                       &kp LCTRL  &kp M  &kp Z  &kp X     &kp C      &kp V       &kp B                 &kp N      &kp COMMA  &kp DOT  &kp FSLH  &kp RBKT
+                                                &kp LGUI  &kp SPACE  &kp LALT    &mc_nav_for_num_bare  &kp SPACE  &kp LGUI
             >;
         };
 
