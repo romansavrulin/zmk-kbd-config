@@ -12,6 +12,7 @@
 #define FROM_TO(row, col) (((row) << 8) + (col))
 
 &lt { quick-tap-ms = <160>; };
+
 &mt { quick-tap-ms = <160>; };
 
 &kscan0 {
@@ -22,7 +23,7 @@
 &default_merger {
     map = <
                 FROM_TO(42,39)
-          >;
+    >;
 };
 
 / {
@@ -199,7 +200,7 @@
                 <&kp SPACE &to 6>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp SPACE &to 0>;
+                <&kp SPACE &to 6>;
 
             label = "MC_NAV_FOR_NUM_BARE";
         };
