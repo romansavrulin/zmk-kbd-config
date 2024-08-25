@@ -11,6 +11,16 @@
 
 #define FROM_TO(row, col) (((row) << 8) + (col))
 
+#define MM_AS(KEY) \
+  mm_##KEY: mm_##KEY { \
+    compatible = "zmk,behavior-mod-morph"; \
+    label =  "mm_##KEY"; \
+    #binding-cells = <0>; \
+    bindings = <&as LS(KEY) KEY>, <&kp KEY>; \
+    mods = <(MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_LALT)>; \
+    keep_mods = <(MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_LALT)>; \
+  };
+
 &lt { quick-tap-ms = <160>; };
 
 &mt { quick-tap-ms = <160>; };
