@@ -110,6 +110,7 @@
 
     behaviors {
         MOD_MORPH(braces, LEFT_BRACE, RIGHT_BRACE)
+        MM_AS(x, X)
         as: as {
             compatible = "zmk,behavior-hold-tap";
             label = "AS";
