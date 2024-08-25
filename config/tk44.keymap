@@ -10,7 +10,6 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define FROM_TO(row, col) (((row) << 8) + (col))
-
 #define MM_AS(NAME, KEY) \
   mm_as_##KEY: mm_as_##KEY { \
     compatible = "zmk,behavior-mod-morph"; \
@@ -191,6 +190,17 @@
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
         };
+
+        as_ru_en_sw: as_ru_en_sw {
+            compatible = "zmk,behavior-hold-tap";
+            label = "AS_RU_EN_SW";
+            bindings = <&kp>, <&mc_ru_en_sw>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+        };
     };
 
     macros {
@@ -270,10 +280,10 @@
 
         as_ru_layer {
             bindings = <
-&mt LSHFT ESC  &kp TAB            &mm_as_Q  &mm_as_W  &mm_as_E  &mm_as_R      &mm_as_T    &mm_as_Y  &mm_as_U      &mm_as_I          &mm_as_O      &mm_as_P                  &mm_as_LBKT  &kp ENTER
-               &mc_ru_en_sw       &mm_as_A  &mm_as_S  &mm_as_D  &mm_as_F      &mm_as_G    &mm_as_H  &mm_as_J      &mm_as_K          &mm_as_L      &mm_as_SEMI               &mm_as_SQT
-               &kp LCTRL          &mm_as_M  &mm_as_Z  &mm_as_X  &mm_as_C      &mm_as_V    &mm_as_B  &mm_as_N      &mm_as_COMMA      &mm_as_DOT    &as_single FSLH QUESTION  &mm_as_RBKT
-                                                       &kp LWIN     &lt_spc 2 SPACE  &kp LALT       &lt 3 SPACE  &lt_spc 2 SPACE  &kp RGUI
+&mt LSHFT ESC  &kp TAB               &mm_as_Q  &mm_as_W  &mm_as_E  &mm_as_R         &mm_as_T    &mm_as_Y     &mm_as_U         &mm_as_I      &mm_as_O    &mm_as_P                  &mm_as_LBKT  &kp ENTER
+               &as_ru_en_sw LSHFT 0  &mm_as_A  &mm_as_S  &mm_as_D  &mm_as_F         &mm_as_G    &mm_as_H     &mm_as_J         &mm_as_K      &mm_as_L    &mm_as_SEMI               &mm_as_SQT
+               &kp LCTRL             &mm_as_M  &mm_as_Z  &mm_as_X  &mm_as_C         &mm_as_V    &mm_as_B     &mm_as_N         &mm_as_COMMA  &mm_as_DOT  &as_single FSLH QUESTION  &mm_as_RBKT
+                                                         &kp LWIN  &lt_spc 2 SPACE  &kp LALT    &lt 3 SPACE  &lt_spc 2 SPACE  &kp RGUI
             >;
         };
 
@@ -297,10 +307,10 @@
 
         as_en_layer {
             bindings = <
-&mt LSHFT ESC  &kp TAB       &mm_as_Q  &mm_as_W  &mm_as_E  &mm_as_R      &mm_as_T    &mm_as_Y  &mm_as_U      &mm_as_I          &mm_as_O                &mm_as_P                 &as_single LS(LBKT) LBKT             &kp ENTER
-               &mc_ru_en_sw  &mm_as_A  &mm_as_S  &mm_as_D  &mm_as_F      &mm_as_G    &mm_as_H  &mm_as_J      &mm_as_K          &mm_as_L                &as_single SEMI COLON    &as_single APOSTROPHE DOUBLE_QUOTES
-               &kp LCTRL     &mm_as_M  &mm_as_Z  &mm_as_X  &mm_as_C      &mm_as_V    &mm_as_B  &mm_as_N      &mm_as_COMMA      &as_single LS(DOT) DOT  &as_single PERIOD COMMA  &as_single LS(RBKT) RBKT
-                                                       &kp LWIN     &lt_spc 5 SPACE  &kp LALT       &lt 6 SPACE  &lt_spc 5 SPACE  &kp RGUI
+&mt LSHFT ESC  &kp TAB       &mm_as_Q  &mm_as_W  &mm_as_E  &mm_as_R         &mm_as_T    &mm_as_Y     &mm_as_U         &mm_as_I      &mm_as_O                &mm_as_P                 &as_single LS(LBKT) LBKT             &kp ENTER
+               &mc_ru_en_sw  &mm_as_A  &mm_as_S  &mm_as_D  &mm_as_F         &mm_as_G    &mm_as_H     &mm_as_J         &mm_as_K      &mm_as_L                &as_single SEMI COLON    &as_single APOSTROPHE DOUBLE_QUOTES
+               &kp LCTRL     &mm_as_M  &mm_as_Z  &mm_as_X  &mm_as_C         &mm_as_V    &mm_as_B     &mm_as_N         &mm_as_COMMA  &as_single LS(DOT) DOT  &as_single PERIOD COMMA  &as_single LS(RBKT) RBKT
+                                                 &kp LWIN  &lt_spc 5 SPACE  &kp LALT    &lt 6 SPACE  &lt_spc 5 SPACE  &kp RGUI
             >;
         };
 
