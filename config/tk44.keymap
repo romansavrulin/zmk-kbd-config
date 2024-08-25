@@ -21,6 +21,26 @@
     keep-mods = <(MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_LALT)>; \
   };
 
+  #define MM_AS_SINGLE(KEY) \
+  mm_as_single_##KEY: mm_as_single_##KEY { \
+    compatible = "zmk,behavior-mod-morph"; \
+    label = "mm_as_single_##KEY"; \
+    #binding-cells = <0>; \
+    bindings = <&as_single LS(KEY) KEY>, <&kp KEY>; \
+    mods = <(MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_LALT)>; \
+    keep-mods = <(MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_LALT)>; \
+  };
+
+  #define MM_AS_SINGLE_(NAME, KEY, MKEY) \
+  mm_as_single_##NAME: mm_as_single_##NAME { \
+    compatible = "zmk,behavior-mod-morph"; \
+    label = "mm_as_single_##NAME"; \
+    #binding-cells = <0>; \
+    bindings = <KEY>, <MKEY>; \
+    mods = <(MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_LALT)>; \
+    keep-mods = <(MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_LALT)>; \
+  };
+
 &lt { quick-tap-ms = <160>; };
 
 &mt { quick-tap-ms = <160>; };
@@ -90,7 +110,42 @@
     };
 
     behaviors {
+        MM_AS(Q)
+        MM_AS(W)
+        MM_AS(E)
+        MM_AS(R)
+        MM_AS(T)
+        MM_AS(Y)
+        MM_AS(U)
+        MM_AS(I)
+        MM_AS(O)
+        MM_AS(P)
+
+        MM_AS(A)
+        MM_AS(S)
+        MM_AS(D)
+        MM_AS(F)
+        MM_AS(G)
+        MM_AS(H)
+        MM_AS(J)
+        MM_AS(K)
+        MM_AS(L)
+
+        MM_AS(M)
+        MM_AS(Z)
         MM_AS(X)
+        MM_AS(C)
+        MM_AS(V)
+        MM_AS(B)
+        MM_AS(N)
+
+        MM_AS(COMMA)
+        MM_AS(DOT)
+        MM_AS(LBKT)
+        MM_AS(RBKT)
+        MM_AS(SEMI)
+        MM_AS(SQT)
+
         as: as {
             compatible = "zmk,behavior-hold-tap";
             label = "AS";
@@ -235,9 +290,9 @@
 
         as_ru_layer {
             bindings = <
-&mt LSHFT ESC  &kp TAB       &as LS(Q) Q  &as LS(W) W  &as LS(E) E  &as LS(R) R      &as LS(T) T    &as LS(Y) Y  &as LS(U) U      &as LS(I) I          &as LS(O) O      &as LS(P) P               &as LS(LBKT) LBKT  &kp ENTER
-               &mc_ru_en_sw  &as LS(A) A  &as LS(S) S  &as LS(D) D  &as LS(F) F      &as LS(G) G    &as LS(H) H  &as LS(J) J      &as LS(K) K          &as LS(L) L      &as LS(SEMI) SEMI         &as LS(SQT) SQT
-               &kp LCTRL     &as LS(M) M  &as LS(Z) Z  &mm_as_X     &as LS(C) C      &as LS(V) V    &as LS(B) B  &as LS(N) N      &as LS(COMMA) COMMA  &as LS(DOT) DOT  &as_single FSLH QUESTION  &as LS(RBKT) RBKT
+&mt LSHFT ESC  &kp TAB       &mm_as_Q  &mm_as_W  &mm_as_E  &mm_as_R      &mm_as_T    &mm_as_Y  &mm_as_U      &mm_as_I          &mm_as_O      &mm_as_P                  &mm_as_LBKT  &kp ENTER
+               &mc_ru_en_sw  &mm_as_A  &mm_as_S  &mm_as_D  &mm_as_F      &mm_as_G    &mm_as_H  &mm_as_J      &mm_as_K          &mm_as_L      &mm_as_SEMI               &mm_as_SQT
+               &kp LCTRL     &mm_as_M  &mm_as_Z  &mm_as_X  &mm_as_C      &mm_as_V    &mm_as_B  &mm_as_N      &mm_as_COMMA      &mm_as_DOT    &as_single FSLH QUESTION  &mm_as_RBKT
                                                        &kp LWIN     &lt_spc 2 SPACE  &kp LALT       &lt 3 SPACE  &lt_spc 2 SPACE  &kp RGUI
             >;
         };
