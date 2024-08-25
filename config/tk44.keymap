@@ -18,7 +18,7 @@
     #binding-cells = <0>; \
     bindings = <&as LS(KEY) KEY>, <&kp KEY>; \
     mods = <(MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_LALT)>; \
-    keep_mods = <(MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_LALT)>; \
+    keep-mods = <(MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_LALT)>; \
   };
 
 #define MM_AS2(NAME, KEY) \
@@ -28,7 +28,7 @@
     #binding-cells = <0>; \
     bindings = <&as LS(KEY) KEY>, <&kp KEY>; \
     mods = <(MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_LALT)>; \
-    keep_mods = <(MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_LALT)>; \
+    keep-mods = <(MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_LALT)>; \
   };
 
 #define MOD_MORPH(NAME, KEY, MOD_KEY) \
