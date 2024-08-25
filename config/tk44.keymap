@@ -21,6 +21,16 @@
     keep_mods = <(MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_LALT)>; \
   };
 
+#define MM_AS2(NAME, KEY) \
+  mm_as_##NAME: mm_as_##NAME { \
+    compatible = "zmk,behavior-mod-morph"; \
+    label = #NAME; \
+    #binding-cells = <0>; \
+    bindings = <&as LS(KEY) KEY>, <&kp KEY>; \
+    mods = <(MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_LALT)>; \
+    keep_mods = <(MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_LALT)>; \
+  };
+
 &lt { quick-tap-ms = <160>; };
 
 &mt { quick-tap-ms = <160>; };
@@ -90,7 +100,7 @@
     };
 
     behaviors {
-        MM_AS(X)
+        MM_AS2(x, X)
         as: as {
             compatible = "zmk,behavior-hold-tap";
             label = "AS";
