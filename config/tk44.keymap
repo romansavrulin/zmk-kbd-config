@@ -11,10 +11,10 @@
 
 #define FROM_TO(row, col) (((row) << 8) + (col))
 
-#define MM_AS2(NAME, KEY) \
-  mm_as_##NAME: mm_as_##NAME { \
+#define MM_AS(KEY) \
+  mm_as_##KEY: mm_as_##KEY { \
     compatible = "zmk,behavior-mod-morph"; \
-    label = "##NAME"; \
+    label = "mm_as_##KEY"; \
     #binding-cells = <0>; \
     bindings = <&as LS(KEY) KEY>, <&kp KEY>; \
     mods = <(MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_LALT)>; \
@@ -90,7 +90,7 @@
     };
 
     behaviors {
-        MM_AS2(x, X)
+        MM_AS(X)
         as: as {
             compatible = "zmk,behavior-hold-tap";
             label = "AS";
