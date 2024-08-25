@@ -307,9 +307,9 @@
 
         as_en_layer {
             bindings = <
-&mt LSHFT ESC  &kp TAB       &mm_as_Q  &mm_as_W  &mm_as_E  &mm_as_R         &mm_as_T    &mm_as_Y     &mm_as_U         &mm_as_I      &mm_as_O                &mm_as_P                 &as_single LS(LBKT) LBKT             &kp ENTER
-               &mc_ru_en_sw  &mm_as_A  &mm_as_S  &mm_as_D  &mm_as_F         &mm_as_G    &mm_as_H     &mm_as_J         &mm_as_K      &mm_as_L                &as_single SEMI COLON    &as_single APOSTROPHE DOUBLE_QUOTES
-               &kp LCTRL     &mm_as_M  &mm_as_Z  &mm_as_X  &mm_as_C         &mm_as_V    &mm_as_B     &mm_as_N         &mm_as_COMMA  &as_single LS(DOT) DOT  &as_single PERIOD COMMA  &as_single LS(RBKT) RBKT
+&mt LSHFT ESC  &kp TAB               &mm_as_Q  &mm_as_W  &mm_as_E  &mm_as_R         &mm_as_T    &mm_as_Y     &mm_as_U         &mm_as_I      &mm_as_O                &mm_as_P                 &as_single LS(LBKT) LBKT             &kp ENTER
+               &as_ru_en_sw LSHFT 0  &mm_as_A  &mm_as_S  &mm_as_D  &mm_as_F         &mm_as_G    &mm_as_H     &mm_as_J         &mm_as_K      &mm_as_L                &as_single SEMI COLON    &as_single APOSTROPHE DOUBLE_QUOTES
+               &kp LCTRL             &mm_as_M  &mm_as_Z  &mm_as_X  &mm_as_C         &mm_as_V    &mm_as_B     &mm_as_N         &mm_as_COMMA  &as_single LS(DOT) DOT  &as_single PERIOD COMMA  &as_single LS(RBKT) RBKT
                                                  &kp LWIN  &lt_spc 5 SPACE  &kp LALT    &lt 6 SPACE  &lt_spc 5 SPACE  &kp RGUI
             >;
         };
