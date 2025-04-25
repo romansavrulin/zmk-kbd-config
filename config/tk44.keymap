@@ -50,17 +50,17 @@
         };
 
         combo_bt0 {
-            bindings = <&bt BT_SEL 0>;
+            bindings = <&bt_layer 0 1>;
             key-positions = <40 6 27>;
         };
 
         combo_bt1 {
-            bindings = <&bt BT_SEL 1>;
+            bindings = <&bt_layer 1 0>;
             key-positions = <40 6 30>;
         };
 
         combo_bt2 {
-            bindings = <&bt BT_SEL 2>;
+            bindings = <&bt_layer 2 1>;
             key-positions = <40 6 29>;
         };
 
@@ -263,6 +263,13 @@
                 <&to 0>;
 
             label = "MC_NAV_FOR_NUM_BARE";
+        };
+
+        bt_layer: bt_layer {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings = <&macro_param_1to2 &bt BT_SEL MACRO_PLACEHOLDER &macro_param_2to1 &to MACRO_PLACEHOLDER>;
+            label = "BT_LAYER";
         };
     };
 
