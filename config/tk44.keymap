@@ -64,21 +64,21 @@
             key-positions = <40 6 29>;
         };
 
-        combo_bare_ru_tog {
-            bindings = <&tog 1>;
-            key-positions = <41 7 13>;
-            layers = <0 1>;
-        };
-
-        combo_ru_en_tog {
-            bindings = <&tog 4>;
+        cmb_to_ru {
+            bindings = <&to 1>;
             key-positions = <41 7 12>;
-            layers = <1 4>;
+            layers = <0>;
         };
 
-        combo_en_to_bare {
-            bindings = <&mc_to_bare_en>;
-            key-positions = <41 7 13>;
+        cmb_to_en {
+            bindings = <&to 4>;
+            key-positions = <41 7 12>;
+            layers = <1>;
+        };
+
+        cmb_to_bare {
+            bindings = <&to 0>;
+            key-positions = <41 7 12>;
             layers = <4>;
         };
 
@@ -215,13 +215,6 @@
                 <&tog 4>;
 
             label = "MC_RU_EN_SW";
-        };
-
-        mc_to_bare_en: mc_to_bare_en {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&tog 4 &tog 1>;
-            label = "MC_TO_BARE_EN";
         };
 
         mc_single_tap: mc_single_tap {
